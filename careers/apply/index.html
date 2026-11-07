@@ -77,8 +77,19 @@ var form=document.getElementById('application-form');
 var button=document.getElementById('submit-button');
 var notice=document.getElementById('notice');
 var iframe=document.getElementById('cm-application-response');
+var availabilityInput=document.getElementById('availability_date');
 var opportunityReady=false;
 var activeRequest='';
+
+// Use the applicant's local calendar date as the earliest valid availability.
+function localDateString(){
+var now=new Date();
+var year=now.getFullYear();
+var month=String(now.getMonth()+1).padStart(2,'0');
+var day=String(now.getDate()).padStart(2,'0');
+return year+'-'+month+'-'+day;
+}
+availabilityInput.min=localDateString();
 function show(message,kind){notice.className='notice '+kind;notice.textContent=message;notice.scrollIntoView({behavior:'smooth',block:'center'});}
 function jsonp(url,callbackName){return new Promise(function(resolve,reject){
 var script=document.createElement('script'),timer;
