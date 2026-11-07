@@ -536,20 +536,19 @@
                     false
                 );
 
-                var destination =
-                    safeUrl(item.external_application_url) ||
-                    safeUrl(item.application_url) ||
-                    '/contact';
+                // Corceptive internships and projects use the shared application form.
+                // Early-career listings retain the employer's external application route.
+                var externalDestination = safeUrl(item.external_application_url);
+                var legacyDestination = safeUrl(item.application_url);
+                var destination = isEarly
+                    ? (externalDestination || legacyDestination || '/careers/apply/?type=' +
+                        encodeURIComponent(type) + '&id=' + encodeURIComponent(item.listing_id || id))
+                    : '/careers/apply/?type=' + encodeURIComponent(type) +
+                        '&id=' + encodeURIComponent(item.listing_id || id);
 
-                var actionText = (
-                    isEarly && safeUrl(item.external_application_url)
-                )
+                var actionText = isEarly && externalDestination
                     ? 'Apply on employer website ↗'
-                    : (
-                        safeUrl(item.application_url)
-                            ? 'Continue to application ↗'
-                            : 'Enquire about this opportunity ↗'
-                    );
+                    : 'Apply now ↗';
 
                 var source = safeUrl(item.source_url);
 
