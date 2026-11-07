@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffaf4">
+<meta name="description" content="Apply for an opportunity with Corceptive Media.">
+<title>Apply | Corceptive Media Careers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/careers/careers-typography.css?v=20261107-1">
+<style>
+:root{--cream:#fffaf4;--wine:#4a1e2b;--ink:#2c2224;--muted:#766b68;--orange:#e56b2f;--line:#e5d8cb;--sans:'Manrope',Arial,sans-serif;--serif:'Cormorant Garamond',Georgia,serif}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}.nav{height:72px;background:#fffdf9;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 max(6vw,24px)}
+.brand{font:600 23px var(--serif);color:var(--wine)}.back{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
+.hero{padding:48px 6vw 35px;background:linear-gradient(110deg,#fffaf4,#f7ede3);border-bottom:1px solid var(--line)}
+.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);font-weight:800}
+h1{font:600 clamp(42px,5vw,62px)/.98 var(--serif);color:var(--wine);margin:12px 0}.lead{font-size:13px;line-height:1.8;color:var(--muted);max-width:680px}
+.wrap{width:min(920px,88vw);margin:34px auto 70px}.opportunity{padding:18px 20px;background:#f5e9de;border:1px solid var(--line);margin-bottom:22px}.opportunity small{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--orange);font-weight:800}.opportunity strong{display:block;font:600 25px var(--serif);color:var(--wine);margin:5px 0}.opportunity span{font-size:11px;color:var(--muted)}
+form{background:#fffdf9;border:1px solid var(--line);padding:clamp(20px,4vw,38px)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}label{font-size:10px;font-weight:800;color:#5f4c49}.req{color:var(--orange)}input,select,textarea{width:100%;border:1px solid #ded1c6;background:#fffefa;padding:12px 13px;font:12px var(--sans);color:var(--ink);border-radius:0;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--orange)}textarea{min-height:105px;resize:vertical}.hint{font-size:9px;color:#8a7e77;line-height:1.6}.check{display:flex;gap:10px;align-items:flex-start;font-size:10px;line-height:1.7;color:var(--muted)}.check input{width:15px;margin-top:2px}.submit{margin-top:20px;background:var(--orange);color:white;border:0;padding:15px 24px;font:800 10px var(--sans);letter-spacing:.13em;text-transform:uppercase;cursor:pointer}.submit:disabled{opacity:.55;cursor:wait}.notice{display:none;padding:15px 17px;margin:0 0 18px;font-size:12px;line-height:1.7}.notice.error{display:block;background:#f9e9e5;color:#8b3426}.notice.success{display:block;background:#edf4eb;color:#315c37}.privacy{font-size:9px;line-height:1.7;color:#887d76;margin-top:16px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero{padding-top:38px}.wrap{margin-top:22px}}
+</style>
+</head>
+<body>
+<header class="nav"><a class="brand" href="/careers/">Corceptive Media</a><a class="back" href="/careers/">← Careers</a></header>
+<section class="hero"><p class="eyebrow">Careers / Application</p><h1>Take your next step.</h1><p class="lead">Share a little about yourself and what you would bring to this opportunity. Fields marked with an asterisk are required.</p></section>
+<main class="wrap">
+<div id="notice" class="notice" role="status" aria-live="polite"></div>
+<div id="opportunity" class="opportunity"><small>Applying for</small><strong id="opp-title">Loading opportunity…</strong><span id="opp-meta">Retrieving the latest published details.</span></div>
+<form id="application-form" novalidate>
+<div class="grid">
+<div class="field"><label for="full_name">Full name <span class="req">*</span></label><input id="full_name" name="full_name" autocomplete="name" maxlength="150" required></div>
+<div class="field"><label for="email">Email address <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+<div class="field"><label for="phone_e164">Phone with country code <span class="req">*</span></label><input id="phone_e164" name="phone_e164" type="tel" placeholder="+919876543210" maxlength="20" required><span class="hint">Use international format, for example +919876543210.</span></div>
+<div class="field"><label for="country">Country of residence <span class="req">*</span></label><input id="country" name="country" autocomplete="country-name" maxlength="100" required></div>
+<div class="field"><label for="city_state">City / State</label><input id="city_state" name="city_state" maxlength="150"></div>
+<div class="field"><label for="institution">Institution / University</label><input id="institution" name="institution" maxlength="200" placeholder="Enter Not applicable if relevant"></div>
+<div class="field"><label for="education_level">Education level <span class="req">*</span></label><select id="education_level" name="education_level" required><option value="">Select</option><option>High school</option><option>Diploma</option><option>Undergraduate</option><option>Postgraduate</option><option>Doctoral</option><option>Other</option><option>Not applicable</option></select></div>
+<div class="field"><label for="course_specialisation">Course / Specialisation</label><input id="course_specialisation" name="course_specialisation" maxlength="150"></div>
+<div class="field"><label for="graduation_year">Graduation year</label><input id="graduation_year" name="graduation_year" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="e.g. 2027"></div>
+<div class="field"><label for="current_status">Current status <span class="req">*</span></label><select id="current_status" name="current_status" required><option value="">Select</option><option>Student</option><option>Recent graduate</option><option>Graduate</option><option>Employed</option><option>Career break</option><option>Other</option></select></div>
+<div class="field full"><label for="linkedin_portfolio_url">LinkedIn / Portfolio URL</label><input id="linkedin_portfolio_url" name="linkedin_portfolio_url" type="url" maxlength="500" placeholder="https://"></div>
+<div class="field full"><label for="motivation">Why are you interested in this opportunity? <span class="req">*</span></label><textarea id="motivation" name="motivation" maxlength="5000" required></textarea></div>
+<div class="field full"><label for="relevant_skills">Relevant skills or experience</label><textarea id="relevant_skills" name="relevant_skills" maxlength="2000"></textarea></div>
+<div class="field"><label for="availability_date">Available from <span class="req">*</span></label><input id="availability_date" name="availability_date" type="date" required></div>
+<div class="field full"><label class="check"><input type="checkbox" name="consent_privacy" value="true" required><span>I have read the privacy notice and consent to Corceptive Media processing the information provided to assess this application. <span class="req">*</span></span></label></div>
+</div>
+<p class="privacy">Please do not submit sensitive personal information such as government identification numbers, financial details or passwords. Your application information is used for recruitment and opportunity assessment.</p>
+<button class="submit" id="submit-button" type="submit">Submit application</button>
+<p class="hint">Your opportunity reference and title are attached automatically. You do not need to enter them.</p>
+</form>
+</main>
+<iframe name="cm-application-response" id="cm-application-response" title="Application response" hidden></iframe>
+<script>
+(function(){
+'use strict';
+var API='https://script.google.com/macros/s/AKfycbwN2yoH-MHqysBi1cJEYj_f1iKbkYgCDHmMvCkzgttRS0uDkLGopfIhR6oPuwZlhqDecQ/exec';
+var params=new URLSearchParams(location.search);
+var type=params.get('type')||'';
+var id=params.get('id')||'';
+var titleEl=document.getElementById('opp-title');
+var metaEl=document.getElementById('opp-meta');
+var form=document.getElementById('application-form');
+var button=document.getElementById('submit-button');
+var notice=document.getElementById('notice');
+var iframe=document.getElementById('cm-application-response');
+var opportunityReady=false;
+var activeRequest='';
+function show(message,kind){notice.className='notice '+kind;notice.textContent=message;notice.scrollIntoView({behavior:'smooth',block:'center'});}
+function jsonp(url,callbackName){return new Promise(function(resolve,reject){
+var script=document.createElement('script'),timer;
+function clean(){clearTimeout(timer);script.remove();try{delete window[callbackName];}catch(e){window[callbackName]=undefined;}}
+window[callbackName]=function(data){clean();resolve(data);};
+script.onerror=function(){clean();reject(new Error('Could not reach the Careers service.'));};
+timer=setTimeout(function(){clean();reject(new Error('The Careers service timed out.'));},12000);
+script.src=url.toString();document.head.appendChild(script);
+});}
+if(!['internships','projects','early-career'].includes(type)||!id){
+titleEl.textContent='Opportunity reference missing';metaEl.textContent='Return to Careers and open an opportunity before applying.';form.hidden=true;
+}else{
+var u=new URL(API);u.searchParams.set('action','detail');u.searchParams.set('type',type);u.searchParams.set('id',id);u.searchParams.set('callback','cmApplicationOpportunityCallback');
+jsonp(u,'cmApplicationOpportunityCallback').then(function(data){
+if(!data||!data.ok||!data.item||data.item.effective_status!=='Open')throw new Error('This opportunity is not currently accepting applications.');
+titleEl.textContent=data.item.title||'Opportunity';
+metaEl.textContent=(data.item.listing_id||id)+' · '+(type==='early-career'?'Early-career opportunity':type==='projects'?'Project experience':'Internship programme');
+opportunityReady=true;
+}).catch(function(err){titleEl.textContent='Applications unavailable';metaEl.textContent=err.message;form.hidden=true;});
+}
+form.addEventListener('submit',function(event){
+event.preventDefault();
+if(!opportunityReady){show('Please wait until the opportunity details have loaded.', 'error');return;}
+if(!form.reportValidity())return;
+var requestId='cm-'+Date.now()+'-'+Math.random().toString(36).slice(2);
+activeRequest=requestId;
+var hidden=function(name,value){var input=document.createElement('input');input.type='hidden';input.name=name;input.value=value;form.appendChild(input);return input;};
+var hType=hidden('opportunity_type',type),hId=hidden('opportunity_id',id),hSource=hidden('source_page_url',location.href),hRequest=hidden('request_id',requestId),hPrivacy=hidden('privacy_notice_version','1.0'),hTrap=hidden('website','');
+form.action=API;form.method='post';form.target=iframe.name;
+button.disabled=true;button.textContent='Submitting…';
+form.submit();
+[hType,hId,hSource,hRequest,hPrivacy,hTrap].forEach(function(el){el.remove();});
+window.setTimeout(function(){if(activeRequest===requestId){button.disabled=false;button.textContent='Submit application';show('We have not received a confirmation yet. Please do not submit again immediately. Contact our team if this continues.','error');}},20000);
+});
+window.addEventListener('message',function(event){
+var data=event.data;
+if(!data||data.channel!=='CM_APPLICATION_RESPONSE'||event.source!==iframe.contentWindow||data.request_id!==activeRequest)return;
+activeRequest='';
+button.disabled=false;button.textContent='Submit application';
+if(data.ok){form.reset();show('Application received. Your reference is '+data.application_id+'. Please keep this reference for your records.','success');}
+else{show(data.error||'We could not submit your application. Please review the details and try again.','error');}
+});
+})();
+</script>
+</body>
+</html>
