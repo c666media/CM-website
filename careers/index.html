@@ -357,6 +357,13 @@ function esc(value){return String(value==null?'':value).replace(/[&<>"']/g,funct
 function safeUrl(value){if(!value||!String(value).trim())return '';try{var u=new URL(String(value),location.origin);return u.protocol==='https:'||u.protocol==='http:'?u.href:'';}catch(e){return '';}}
 function loadEcosystem(){
  var callback='cmCareersPartnersCallback',script=document.createElement('script'),url=new URL(API),timer;
+
+ function showEmpty(message){
+  var note=document.getElementById('partnerNote');
+  var track=viewport.querySelector('.partner-track');
+  track.innerHTML='<div class="partner-empty">No published organisation profiles yet. Approved names and logos will appear here.</div>';
+  note.textContent=message||'Publish approved records in the Ecosystem tab to display organisation profiles. Independent institutional references are not endorsements or partnerships.';
+ }
  url.searchParams.set('action','list');
  url.searchParams.set('type','ecosystem');
  url.searchParams.set('callback',callback);
@@ -374,13 +381,13 @@ function loadEcosystem(){
   var track=viewport.querySelector('.partner-track');
 
   if(!response||response.ok!==true){
-   note.textContent='Ecosystem profiles are temporarily unavailable. Please check back soon.';
+   showEmpty('Ecosystem profiles are temporarily unavailable. Please check back soon.');
    return;
   }
 
   var items=Array.isArray(response.items)?response.items:[];
   if(!items.length){
-   note.textContent='Published organisation profiles will appear here. Institution references are shown independently; no affiliation, partnership or endorsement is implied.';
+   showEmpty();
    return;
   }
 
@@ -417,12 +424,12 @@ function loadEcosystem(){
 
  script.onerror=function(){
   cleanup();
-  document.getElementById('partnerNote').textContent='Ecosystem profiles are temporarily unavailable. Please check back soon.';
+  showEmpty('Ecosystem profiles are temporarily unavailable. Please check back soon.');
  };
 
  timer=setTimeout(function(){
   cleanup();
-  document.getElementById('partnerNote').textContent='Ecosystem profiles are taking longer than expected to load.';
+  showEmpty('Ecosystem profiles are taking longer than expected to load.');
  },12000);
 
  script.src=url.toString();
