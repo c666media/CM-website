@@ -68,7 +68,7 @@ header{height:78px;position:absolute;z-index:20;top:14px;left:50%;transform:tran
 @media(max-width:680px){
 header{top:8px;height:68px;width:94vw;border-radius:13px}.nav{padding:0 14px}.brand img{width:33px;height:33px}.brand span{font-size:22px}.menu{display:block}
 .navlinks{display:none;position:absolute;top:68px;left:0;right:0;margin-top:8px;padding:12px 18px 18px;background:rgba(255,248,242,.9);border:1px solid #fff;border-radius:13px;box-shadow:0 12px 30px #32101f33;backdrop-filter:blur(22px);flex-direction:column;align-items:stretch;gap:0}
-.navlinks.open{display:flex}.navlinks a{padding:13px 0;border-bottom:1px solid #8f625322}.navlinks a.active{border-bottom:1px solid #8f625322}.navlinks .contact{text-align:center;margin-top:10px;padding:14px;border:0}
+.navlinks.open{display:flex}.navlinks a{color:var(--wine);padding:13px 0;border-bottom:1px solid #8f625322}.navlinks a.active{color:var(--orange)}.navlinks a.active{border-bottom:1px solid #8f625322}.navlinks .contact{text-align:center;margin-top:10px;padding:14px;border:0}
 .hero{padding:112px 0 51px;min-height:0}.hero-grid{grid-template-columns:1fr;gap:37px}.hero-copy{padding:0}.hero h1{font-size:clamp(54px,13vw,67px)}.hero-copy>p:not(.eyebrow){font-size:13px}.hero-visual img{height:auto;aspect-ratio:1.5/1;border-radius:18px 5px 18px 18px}
 .benefits{padding:13px 0}.benefit-row{grid-template-columns:1fr 1fr;padding:7px}.benefit{justify-content:flex-start;padding:10px 7px;border-right:0;border-bottom:1px solid #8f625322}.benefit:nth-child(odd){border-right:1px solid #8f625322}.benefit:nth-last-child(-n+2){border-bottom:0}.benefit-icon{width:31px;height:31px;font-size:15px}.benefit strong{font-size:19px}
 .opportunities{padding:51px 0 39px}.section-head{display:block;margin-bottom:22px}.section-head .sub{margin-top:14px}.op-grid{grid-template-columns:1fr;gap:13px}.op-card{min-height:190px}
@@ -135,7 +135,7 @@ var viewport=document.getElementById('partnerViewport');
 document.getElementById('prev').addEventListener('click',function(){viewport.scrollBy({left:-430,behavior:'smooth'});});
 document.getElementById('next').addEventListener('click',function(){viewport.scrollBy({left:430,behavior:'smooth'});});
 function esc(value){return String(value==null?'':value).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-function safeUrl(value){try{var u=new URL(String(value||''),location.origin);return u.protocol==='https:'||u.protocol==='http:'?u.href:'';}catch(e){return '';}}
+function safeUrl(value){if(!value||!String(value).trim())return '';try{var u=new URL(String(value),location.origin);return u.protocol==='https:'||u.protocol==='http:'?u.href:'';}catch(e){return '';}}
 function loadEcosystem(){
  var callback='cmCareersPartnersCallback',script=document.createElement('script'),url=new URL(API),timer;
  url.searchParams.set('action','list');url.searchParams.set('type','ecosystem');url.searchParams.set('callback',callback);
