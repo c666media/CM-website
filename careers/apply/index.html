@@ -80,7 +80,7 @@ script.src=url.toString();document.head.appendChild(script);
 if(!['internships','projects','early-career'].includes(type)||!id){
 titleEl.textContent='Opportunity reference missing';metaEl.textContent='Return to Careers and open an opportunity before applying.';form.hidden=true;
 }else{
-var u=new URL(API);u.searchParams.set('action','detail');u.searchParams.set('type',type);u.searchParams.set('id',id);u.searchParams.set('callback','cmApplicationOpportunityCallback');
+var u=new URL(API);u.searchParams.set('action','detail');u.searchParams.set('type',type);u.searchParams.set('id',id);u.searchParams.set('prefix','cmApplicationOpportunityCallback');
 jsonp(u,'cmApplicationOpportunityCallback').then(function(data){
 if(!data||!data.ok||!data.item||data.item.effective_status!=='Open')throw new Error('This opportunity is not currently accepting applications.');
 titleEl.textContent=data.item.title||'Opportunity';
