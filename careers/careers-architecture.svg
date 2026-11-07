@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Contemporary institutional architecture</title><desc id="desc">A modern stone and glass campus building in warm late-afternoon light, framed by trees and landscaped steps.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#f5c18e"/><stop offset=".62" stop-color="#f8e0c0"/><stop offset="1" stop-color="#ead2b8"/></linearGradient>
+ <linearGradient id="stone" x2="1" y2=".2"><stop stop-color="#e8d6bd"/><stop offset=".5" stop-color="#fff0d8"/><stop offset="1" stop-color="#cbb69d"/></linearGradient>
+ <linearGradient id="glass" x2="1" y2="1"><stop stop-color="#392631"/><stop offset=".45" stop-color="#89636a"/><stop offset="1" stop-color="#d39a73"/></linearGradient>
+ <linearGradient id="ground" x2="0" y2="1"><stop stop-color="#b8a18a"/><stop offset="1" stop-color="#6e534a"/></linearGradient>
+ <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#fff3cb"/><stop offset="1" stop-color="#e8a66b"/></linearGradient>
+</defs>
+<rect width="1200" height="760" fill="url(#sky)"/><circle cx="205" cy="245" r="125" fill="url(#sun)" opacity=".8"/>
+<path d="M0 540 160 470 285 510 410 448 550 495 710 438 880 500 1035 450 1200 510V760H0Z" fill="#8e7566" opacity=".28"/>
+<path d="M260 176 780 90 1110 170 1110 590 260 590Z" fill="url(#stone)"/>
+<path d="M260 176 780 90 1110 170 1110 208 780 128 260 216Z" fill="#ad8776"/>
+<path d="M324 213 748 147 748 547 324 547Z" fill="url(#glass)"/>
+<path d="M780 145 1065 215 1065 586 780 547Z" fill="#50323d"/>
+<path d="M348 234 724 176 724 526 348 526Z" fill="#b5a4a0" opacity=".35"/>
+<g stroke="#f0dcc4" stroke-width="12" opacity=".92"><path d="M435 220V533M535 205V533M635 189V533M824 157V555M934 184V570M1040 210V583"/></g>
+<g stroke="#d9b79a" stroke-width="9" opacity=".7"><path d="M324 330 748 260M324 438 748 369M780 292 1065 354M780 420 1065 475"/></g>
+<path d="M205 552 780 455 1160 555 1160 610 780 523 205 618Z" fill="#6d3943"/>
+<path d="M205 552 780 455 1160 555 1160 582 780 485 205 582Z" fill="#c98c66"/>
+<rect x="730" y="486" width="168" height="104" fill="#2f252e"/><rect x="748" y="500" width="132" height="90" fill="#c48f76" opacity=".55"/>
+<path d="M0 610 380 550 780 625 1200 560V760H0Z" fill="url(#ground)"/>
+<path d="M0 653 380 593 780 670 1200 598" fill="none" stroke="#ead8c0" stroke-width="13" opacity=".7"/>
+<path d="M60 710 404 642 780 715 1110 655" fill="none" stroke="#d4b99f" stroke-width="8" opacity=".7"/>
+<g fill="#273b31"><path d="M52 560q-55-125 10-245 81 111 30 240Z"/><path d="M0 530q-12-100 35-181 48 101 12 188Z"/><path d="M1120 582q-15-135 55-245 55 126 9 255Z"/><path d="M1070 565q-5-100 35-172 43 93 17 181Z"/></g>
+<g fill="#526348"><circle cx="58" cy="324" r="69"/><circle cx="105" cy="375" r="58"/><circle cx="1140" cy="366" r="75"/><circle cx="1085" cy="412" r="55"/></g>
+<g fill="#8c4c49"><circle cx="165" cy="628" r="22"/><circle cx="213" cy="619" r="18"/><circle cx="1010" cy="618" r="25"/><circle cx="1060" cy="632" r="20"/></g>
+<g fill="#344b38"><circle cx="284" cy="646" r="24"/><circle cx="331" cy="634" r="19"/><circle cx="900" cy="640" r="24"/><circle cx="950" cy="648" r="18"/></g>
+<rect width="1200" height="760" fill="#5d2634" opacity=".08"/>
+</svg>
