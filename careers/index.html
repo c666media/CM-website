@@ -19,6 +19,40 @@ header{height:78px;background:#fffaf4f2;border-bottom:1px solid #eadfd4;position
 .ecosystem{background:#fffaf4;border-top:1px solid #eee0d2;padding:36px 0 34px}.ecosystem[hidden]{display:none}.ecosystem-head{text-align:center}.ecosystem-head .eyebrow{color:var(--orange);margin:0 0 6px}.ecosystem-head h2{font:600 32px/1 var(--serif);color:var(--wine);margin:0}.ticker{display:flex;gap:0;align-items:center;margin:22px auto 0;border:1px solid #efe2d7;border-radius:14px;background:#fffdfa;box-shadow:0 6px 18px #552b1d0b;overflow:auto}.ticker span{white-space:nowrap;padding:14px 22px;border-right:1px solid var(--line);font:600 18px var(--serif);color:var(--wine)}.ticker span:last-child{border:0}.ticker-note{text-align:center;font-size:9px;line-height:1.6;color:#918078;margin:13px auto 0;max-width:780px}
 @media(max-width:900px){.navlinks{gap:16px}.hero-grid{gap:30px}.hero-visual img{height:280px}.op-card{min-height:205px;padding:21px}.op-card h3{font-size:28px}}
 @media(max-width:680px){header{height:70px}.nav{width:88vw}.brand img{width:36px;height:36px}.brand span{font-size:22px}.menu{display:block}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;padding:12px 6vw 24px;background:var(--cream);border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}.navlinks.open{display:flex}.navlinks a{padding:14px 0;border-bottom:1px solid var(--line)}.navlinks .contact{text-align:center;margin-top:12px}.hero:after{width:320px;height:320px;right:-150px;top:110px}.hero-grid{grid-template-columns:1fr;gap:40px;padding:50px 0 55px}.hero h1{font-size:clamp(53px,13vw,68px)}.hero-copy>p:not(.eyebrow){font-size:13px}.hero-visual{margin:0 0 10px 4px}.hero-visual img{height:auto;aspect-ratio:1.5/1;border-radius:145px 4px 4px 4px}.hero-visual:before{inset:-13px -8px -14px 9%}.benefit-row{grid-template-columns:1fr 1fr;padding:9px 0}.benefit{justify-content:flex-start;padding:12px 8px;border-right:0;border-bottom:1px solid var(--line)}.benefit:nth-child(odd){border-right:1px solid var(--line)}.benefit:nth-last-child(-n+2){border-bottom:0}.benefit:first-child{padding-left:8px}.benefit i{width:32px;height:32px}.benefit strong{font-size:20px}.opportunities{padding:53px 0 40px}.section-head{margin-bottom:25px}.op-grid{grid-template-columns:1fr;gap:12px}.op-card{min-height:210px}.ticker{justify-content:flex-start}.ticker span{padding:12px 16px}}
+
+/* Hero photo: native landscape ratio + warm glass-edge illumination */
+.hero-visual{position:relative;isolation:isolate;overflow:visible;padding:0 5px}
+.hero-visual:before{
+  content:"";display:block;position:absolute;z-index:0;pointer-events:none;
+  inset:-15px -13px;border-radius:31px;
+  background:
+    radial-gradient(ellipse at 16% 12%,rgba(255,224,169,.96) 0%,rgba(255,224,169,0) 48%),
+    radial-gradient(ellipse at 90% 82%,rgba(241,135,78,.82) 0%,rgba(241,135,78,0) 49%),
+    linear-gradient(135deg,rgba(255,255,255,.95),rgba(255,216,167,.28) 46%,rgba(255,255,255,.7));
+  filter:blur(14px);opacity:.95;
+  box-shadow:0 0 24px rgba(255,194,124,.42),0 0 48px rgba(255,224,180,.22);
+}
+.hero-visual img{
+  position:relative;z-index:1;display:block;width:100%;height:auto;
+  aspect-ratio:16/9;object-fit:cover;object-position:center;
+  border-radius:22px;border:1px solid rgba(255,255,255,.82);
+  box-shadow:0 0 0 1px rgba(255,255,255,.3),0 18px 42px rgba(22,8,24,.34),0 0 20px rgba(255,207,146,.32);
+  filter:none;image-rendering:auto;
+}
+.hero-visual:after{
+  content:"";position:absolute;z-index:2;left:0;right:0;bottom:0;height:25%;
+  border-radius:0 0 22px 22px;background:linear-gradient(transparent,rgba(42,16,29,.58));
+  pointer-events:none;
+}
+.visual-label{z-index:3;left:25px;bottom:18px;text-shadow:0 2px 12px rgba(32,10,23,.8)}
+@media(max-width:680px){
+  .hero-visual{padding:0 4px}
+  .hero-visual:before{inset:-11px -9px;filter:blur(11px);border-radius:22px}
+  .hero-visual img{height:auto;aspect-ratio:16/9;border-radius:16px}
+  .hero-visual:after{border-radius:0 0 16px 16px}
+  .visual-label{left:17px;bottom:14px;font-size:20px}
+}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
 /* Approved final glassmorphism skin */
