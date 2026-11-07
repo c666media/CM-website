@@ -1,0 +1,94 @@
+/* Corceptive Careers — shared readability layer
+   Typography-only overrides. No layout, routes, API or CMS behaviour changed. */
+
+/* Navigation and breadcrumb labels */
+.navlinks a,
+.menu {
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+}
+
+.eyebrow,
+.back {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+}
+
+/* Buttons and primary actions */
+.btn,
+.navlinks .contact,
+.listing-link,
+.op-link,
+.source-link {
+    font-size: 11px !important;
+    line-height: 1.5 !important;
+}
+
+/* Listing metadata and compact labels */
+.content-head span,
+.status,
+.ref,
+.chips span,
+.chip,
+.op-meta {
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+}
+
+/* Supporting copy */
+.section-head .sub,
+.op-card p,
+.listing p,
+.hero p.desc,
+.empty p,
+.side-card p,
+.state p {
+    font-size: 13px !important;
+    line-height: 1.8 !important;
+}
+
+/* Benefit captions, partner notes and small references */
+.benefit small,
+.partners-head p {
+    font-size: 12px !important;
+    line-height: 1.65 !important;
+}
+
+.hero-note,
+.ticker-note,
+.partner-note,
+.partner-copy small {
+    font-size: 10px !important;
+    line-height: 1.65 !important;
+}
+
+/* Opportunity detail reference text */
+.tiny {
+    font-size: 10px !important;
+    line-height: 1.6 !important;
+}
+
+/* Keep keyboard focus visible on text links and buttons */
+.navlinks a:focus-visible,
+.btn:focus-visible,
+.listing-link:focus-visible,
+.op-link:focus-visible,
+.back:focus-visible,
+.source-link:focus-visible {
+    outline: 2px solid var(--orange, #e56b2f);
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    .navlinks a,
+    .menu {
+        font-size: 12px !important;
+    }
+
+    .btn,
+    .navlinks .contact,
+    .listing-link,
+    .op-link {
+        font-size: 11px !important;
+    }
+}
