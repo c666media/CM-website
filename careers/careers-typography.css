@@ -150,3 +150,17 @@
 .partner-copy strong {
     overflow-wrap: anywhere;
 }
+
+
+.partner-empty {
+    min-height: 108px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    border: 1px dashed rgba(126, 65, 42, .28);
+    border-radius: 15px;
+    background: rgba(255, 253, 249, .46);
+    color: var(--muted, #766b68);
+    font-size: 13px;
+    line-height: 1.7;
+}
