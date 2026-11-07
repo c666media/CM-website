@@ -357,27 +357,76 @@ function esc(value){return String(value==null?'':value).replace(/[&<>"']/g,funct
 function safeUrl(value){if(!value||!String(value).trim())return '';try{var u=new URL(String(value),location.origin);return u.protocol==='https:'||u.protocol==='http:'?u.href:'';}catch(e){return '';}}
 function loadEcosystem(){
  var callback='cmCareersPartnersCallback',script=document.createElement('script'),url=new URL(API),timer;
- url.searchParams.set('action','list');url.searchParams.set('type','ecosystem');url.searchParams.set('callback',callback);
- function cleanup(){clearTimeout(timer);script.remove();try{delete window[callback];}catch(e){window[callback]=undefined;}}
+ url.searchParams.set('action','list');
+ url.searchParams.set('type','ecosystem');
+ url.searchParams.set('callback',callback);
+ url.searchParams.set('_',Date.now());
+
+ function cleanup(){
+  clearTimeout(timer);
+  script.remove();
+  try{delete window[callback];}catch(e){window[callback]=undefined;}
+ }
+
  window[callback]=function(response){
   cleanup();
-  var note=document.getElementById('partnerNote'),track=viewport.querySelector('.partner-track');
-  if(!response||response.ok!==true){note.textContent='Partner profiles will appear here after approved publication. No affiliation, partnership or endorsement is implied.';return;}
-  var items=Array.isArray(response.items)?response.items:[];
-  if(items.length){
-   track.innerHTML=items.map(function(item){
-    var name=item.display_name||item.public_label||'Organisation';
-    var subtitle=item.public_label||item.display_context||item.entity_type||item.country||'Ecosystem reference';
-    var href=safeUrl(item.website_url);
-    var inner='<span class="partner-symbol">'+esc(name.trim().charAt(0).toUpperCase())+'</span><div class="partner-copy"><strong>'+esc(name)+'</strong><small>'+esc(subtitle)+'</small></div>';
-    return href?'<a class="partner-card" href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+inner+'</a>':'<div class="partner-card">'+inner+'</div>';
-   }).join('');
+  var note=document.getElementById('partnerNote');
+  var track=viewport.querySelector('.partner-track');
+
+  if(!response||response.ok!==true){
+   note.textContent='Ecosystem profiles are temporarily unavailable. Please check back soon.';
+   return;
   }
-  note.textContent=items.length?(response.disclaimer||'Names are shown for independent reference only. No affiliation, partnership or endorsement is implied.'):'Preview placeholders only — names and logos will appear here after approval and publication. '+(response.disclaimer||'No affiliation, partnership or endorsement is implied.');
+
+  var items=Array.isArray(response.items)?response.items:[];
+  if(!items.length){
+   note.textContent='Published organisation profiles will appear here. Institution references are shown independently; no affiliation, partnership or endorsement is implied.';
+   return;
+  }
+
+  if(!track.dataset.logoFallbackBound){
+   track.addEventListener('error',function(event){
+    var image=event.target;
+    if(image&&image.tagName==='IMG'&&image.closest('.partner-logo')){
+     image.hidden=true;
+     var fallback=image.parentNode.querySelector('.partner-symbol');
+     if(fallback)fallback.hidden=false;
+    }
+   },true);
+   track.dataset.logoFallbackBound='true';
+  }
+
+  track.innerHTML=items.map(function(item){
+   var name=String(item.display_name||item.public_label||'Organisation').trim();
+   var subtitle=item.public_label||item.display_context||item.entity_type||item.country||'Ecosystem reference';
+   var href=safeUrl(item.website_url);
+   var logo=safeUrl(item.brand_asset_url);
+   var initial=esc(name.charAt(0).toUpperCase());
+   var mark=logo
+    ? '<span class="partner-logo"><img src="'+esc(logo)+'" alt="" loading="lazy" decoding="async"><span class="partner-symbol" hidden>'+initial+'</span></span>'
+    : '<span class="partner-symbol">'+initial+'</span>';
+   var inner=mark+'<div class="partner-copy"><strong>'+esc(name)+'</strong><small>'+esc(subtitle)+'</small></div>';
+
+   return href
+    ? '<a class="partner-card" href="'+esc(href)+'" target="_blank" rel="noopener noreferrer">'+inner+'</a>'
+    : '<div class="partner-card">'+inner+'</div>';
+  }).join('');
+
+  note.textContent=response.disclaimer||'Organisation names are shown according to their published relationship labels. No affiliation, partnership or endorsement is implied unless specifically stated.';
  };
- script.onerror=function(){cleanup();document.getElementById('partnerNote').textContent='Partner profiles will appear here after approved publication. No affiliation, partnership or endorsement is implied.';};
- timer=setTimeout(function(){cleanup();},12000);
- script.src=url.toString();document.head.appendChild(script);
+
+ script.onerror=function(){
+  cleanup();
+  document.getElementById('partnerNote').textContent='Ecosystem profiles are temporarily unavailable. Please check back soon.';
+ };
+
+ timer=setTimeout(function(){
+  cleanup();
+  document.getElementById('partnerNote').textContent='Ecosystem profiles are taking longer than expected to load.';
+ },12000);
+
+ script.src=url.toString();
+ document.head.appendChild(script);
 }
 loadEcosystem();
 })();

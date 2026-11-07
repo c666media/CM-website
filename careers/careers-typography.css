@@ -92,3 +92,61 @@
         font-size: 11px !important;
     }
 }
+
+/* Partner strip — clearer labels and logo-ready marks */
+.partners-head p {
+    font-size: 13px !important;
+    line-height: 1.75 !important;
+}
+
+.partner-copy strong {
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+}
+
+.partner-copy small {
+    font-size: 11px !important;
+    line-height: 1.55 !important;
+    letter-spacing: .10em !important;
+}
+
+.partner-note {
+    font-size: 11px !important;
+    line-height: 1.65 !important;
+}
+
+.partner-logo {
+    width: 43px;
+    height: 43px;
+    flex: 0 0 43px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(110, 68, 56, .12);
+    border-radius: 12px;
+    background: #fffdf9;
+    box-shadow: 0 5px 12px rgba(70, 28, 43, .08);
+}
+
+.partner-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.partner-logo .partner-symbol {
+    width: 43px;
+    height: 43px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.partner-copy {
+    min-width: 0;
+}
+
+.partner-copy strong {
+    overflow-wrap: anywhere;
+}
