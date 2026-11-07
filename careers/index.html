@@ -102,6 +102,18 @@ header{top:8px;height:68px;width:94vw;border-radius:13px}.nav{padding:0 14px}.br
  .hero-visual img{height:auto!important;aspect-ratio:16/9;border-radius:16px}
 }
 
+
+/* Final restrained hero: remove oversized background blob, add fine glass rim */
+.hero{background:radial-gradient(ellipse at 86% 70%,rgba(202,116,71,.13) 0%,rgba(202,116,71,0) 35%),linear-gradient(112deg,#3a1725 0%,#512535 54%,#663343 100%)!important}
+.hero:after{content:none!important;display:none!important}
+.hero:before{background:linear-gradient(90deg,rgba(20,7,17,.12),transparent 62%)!important}
+.hero-visual{position:relative;isolation:isolate;overflow:visible;padding:0 5px;border-radius:22px}
+.hero-visual:before{content:"";position:absolute;z-index:2;inset:-1.5px;padding:1.5px;border-radius:23px;background:linear-gradient(132deg,rgba(255,244,215,.98),rgba(246,174,106,.82) 23%,rgba(255,255,255,.62) 48%,rgba(224,153,102,.75) 73%,rgba(255,237,198,.95));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 4px rgba(255,190,119,.62)) drop-shadow(0 0 10px rgba(255,172,94,.2));pointer-events:none}
+.hero-visual img{position:relative;z-index:1;display:block;width:100%;height:auto!important;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:22px;border:1px solid rgba(255,255,255,.55);box-shadow:0 14px 38px rgba(24,8,20,.34),inset 0 0 0 1px rgba(255,255,255,.22);filter:none;image-rendering:auto}
+.hero-visual:after{content:"";position:absolute;z-index:1;left:0;right:0;bottom:0;height:24%;border-radius:0 0 22px 22px;background:linear-gradient(transparent,rgba(39,15,27,.42));pointer-events:none}
+.visual-label{z-index:3;left:25px;bottom:18px;text-shadow:0 2px 12px rgba(30,8,20,.86)}
+@media(max-width:680px){.hero-visual{padding:0 4px}.hero-visual:before{inset:-1.5px;border-radius:17px}.hero-visual img{height:auto!important;aspect-ratio:16/9;border-radius:16px}.hero-visual:after{border-radius:0 0 16px 16px}.visual-label{left:17px;bottom:14px;font-size:20px}}
+
 </style>
 </head>
 <body>
@@ -109,7 +121,7 @@ header{top:8px;height:68px;width:94vw;border-radius:13px}.nav{padding:0 14px}.br
 <main>
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy"><p class="eyebrow">Careers at Corceptive Media</p><h1>Turn experience<br>into your next<br><em>advantage.</em></h1><p>Explore practical opportunities, contribute to meaningful work and build the confidence to take your next professional step.</p><div class="actions"><a class="btn btn-primary" href="#opportunities">Explore opportunities ›</a><a class="btn btn-secondary" href="/contact">Partner with us ›</a></div><div class="hero-note">Practical work · Guided learning · Professional growth</div></div>
-<div class="hero-visual"><img src="careers-office-building.jpg" alt="A contemporary office building with glass facades and landscaped grounds"><div class="visual-label">Make your next step a meaningful one.</div></div>
+<div class="hero-visual"><img src="careers-office-building.webp" alt="A contemporary office building with glass facades and landscaped grounds"><div class="visual-label">Make your next step a meaningful one.</div></div>
 </div></section>
 <section class="benefits"><div class="wrap benefit-row">
 <div class="benefit"><i>↗</i><div><strong>Real work</strong><small>Practical assignments</small></div></div>
