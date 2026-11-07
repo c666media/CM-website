@@ -104,7 +104,9 @@ window.setTimeout(function(){if(activeRequest===requestId){button.disabled=false
 });
 window.addEventListener('message',function(event){
 var data=event.data;
-if(!data||data.channel!=='CM_APPLICATION_RESPONSE'||event.source!==iframe.contentWindow||data.request_id!==activeRequest)return;
+var trustedOrigin=false;
+try{var host=new URL(event.origin).hostname;trustedOrigin=host==='script.google.com'||host==='script.googleusercontent.com'||host.endsWith('.googleusercontent.com');}catch(e){}
+if(!trustedOrigin||!data||data.channel!=='CM_APPLICATION_RESPONSE'||data.request_id!==activeRequest)return;
 activeRequest='';
 button.disabled=false;button.textContent='Submit application';
 if(data.ok){form.reset();show('Application received. Your reference is '+data.application_id+'. Please keep this reference for your records.','success');}
