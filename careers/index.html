@@ -226,6 +226,74 @@ header{top:8px;height:68px;width:94vw;border-radius:13px}.nav{padding:0 14px}.br
 }
 
 
+/* CORCEPTIVE — CLEAN GLASS EDGE */
+.hero-visual {
+  position: relative !important;
+  isolation: isolate !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+
+  padding: 3px !important;
+  border: 1px solid rgba(255,255,255,.72) !important;
+  border-radius: 22px !important;
+
+  background: rgba(255,255,255,.06) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* REMOVE ALL PREVIOUS LIGHTING AND OVERLAYS */
+.hero-visual::before,
+.hero-visual::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* PHOTO */
+.hero-visual img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+
+  border: 0 !important;
+  border-radius: 17px !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* CAPTION */
+.visual-label {
+  z-index: 3 !important;
+  left: 25px !important;
+  bottom: 18px !important;
+  text-shadow: 0 2px 8px rgba(20,8,14,.65) !important;
+}
+
+/* MOBILE */
+@media(max-width:680px) {
+  .hero-visual {
+    padding: 2px !important;
+    border-radius: 17px !important;
+  }
+
+  .hero-visual img {
+    border-radius: 13px !important;
+  }
+
+  .visual-label {
+    left: 17px !important;
+    bottom: 14px !important;
+  }
+}
+  
+
+
 </style>
 </head>
 <body>
