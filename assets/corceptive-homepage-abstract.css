@@ -65,3 +65,442 @@ body:has(.cm-homepage) main{padding-top:0!important}
 .cm-contact-link:hover{background:linear-gradient(120deg,#fff8e9,#f3dfbd);box-shadow:0 0 0 3px rgba(207,165,91,.16),0 8px 20px rgba(130,81,46,.12);transform:translateY(-3px)}
 @media(max-width:900px){.cm-hero{min-height:620px;padding:150px 6vw 70px}.cm-hero-art{width:70%;opacity:.72;right:-10%}.cm-hero-title{font-size:clamp(56px,9vw,82px)!important}.cm-section-heading{display:block}.cm-section-heading>p{margin-top:18px}.cm-service-grid{grid-template-columns:1fr 1fr}.cm-approach{grid-template-columns:1fr;gap:30px}.cm-approach-body{border-left:0;border-top:1px solid var(--cm-gold);padding:28px 0 0}}
 @media(max-width:620px){body:has(.cm-homepage) header{top:8px!important;width:94vw!important;height:66px!important}body:has(.cm-homepage) header>div:first-child{padding:0 14px!important}.cm-hero{min-height:670px;padding:138px 6vw 56px;align-items:flex-start}.cm-hero-art{top:38%;right:-22%;width:100%;height:62%;opacity:.78;mask-image:linear-gradient(180deg,transparent 0%,#000 22%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 22%)}.cm-hero-inner{max-width:100%}.cm-hero-title{font-size:clamp(53px,13vw,72px)!important;line-height:.9!important}.cm-hero-copy{font-size:14px;max-width:420px}.cm-hero-pillars{gap:12px;flex-wrap:wrap;margin-top:34px}.cm-hero-pillars span{font-size:9px}.cm-capabilities{padding:70px 6vw}.cm-section-heading h2{font-size:42px}.cm-service-grid{grid-template-columns:1fr;gap:18px}.cm-card-image{height:220px}.cm-approach{padding:68px 6vw}.cm-approach-points{grid-template-columns:1fr;gap:14px}.cm-contact-strip{padding:58px 6vw;display:block}.cm-contact-strip h2{font-size:36px}.cm-contact-link{margin-top:24px}}
+
+
+/* ==========================================================
+   CORCEPTIVE MEDIA — REFERENCE DESIGN REFINEMENT
+   ========================================================== */
+
+/* 1. HERO — full-width abstract artwork */
+.cm-hero {
+  min-height: 650px;
+  padding: 158px max(6vw, calc((100vw - 1240px)/2)) 78px;
+  background: linear-gradient(
+    115deg,
+    #fffaf4 0%,
+    #fbf2e8 55%,
+    #f4e5d5 100%
+  );
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.cm-hero-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/corceptive-abstract-hero-wide.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.cm-hero-inner {
+  width: min(780px, 100%);
+  max-width: 780px;
+  margin: 0 auto 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.cm-hero-title {
+  font-size: clamp(72px, 7.5vw, 112px) !important;
+  line-height: .85 !important;
+  font-weight: 600 !important;
+  letter-spacing: -.045em !important;
+  text-shadow:
+    0 2px 1px rgba(255,250,244,.95),
+    0 8px 24px rgba(67,39,36,.13) !important;
+}
+
+.cm-hero-title span {
+  text-shadow:
+    0 2px 1px rgba(255,250,244,.95),
+    0 8px 22px rgba(229,99,43,.15);
+}
+
+.cm-hero-copy {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+/* 2. HERO TO CAPABILITIES — soft section blend */
+.cm-hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 125px;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255,250,244,0) 0%,
+    rgba(255,250,244,.48) 48%,
+    #fffaf4 100%
+  );
+}
+
+.cm-capabilities {
+  padding-top: 54px;
+  padding-bottom: 100px;
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255,255,255,.95) 0%,
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      #fffaf4 0%,
+      #fff8f0 45%,
+      #f8eee4 100%
+    );
+}
+
+.cm-section-heading,
+.cm-service-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.cm-section-heading {
+  margin-bottom: 38px;
+}
+
+.cm-section-heading h2 {
+  color: #4a1e2b;
+  letter-spacing: -.025em;
+}
+
+/* 3. SERVICE CARDS — rounded editorial treatment */
+.cm-service-grid {
+  gap: 22px;
+  align-items: stretch;
+}
+
+.cm-service-card {
+  min-width: 0;
+  transition:
+    transform .4s cubic-bezier(.2,.8,.2,1),
+    filter .4s ease;
+}
+
+.cm-card-shell {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eadbca;
+  border-radius: 17px;
+  background: rgba(255,253,249,.9);
+  box-shadow: 0 7px 22px rgba(74,30,43,.055);
+  transition:
+    box-shadow .4s ease,
+    border-color .4s ease;
+}
+
+.cm-service-card:hover {
+  transform: translateY(-7px);
+}
+
+.cm-service-card:hover .cm-card-shell {
+  border-color: #e9a653;
+  box-shadow:
+    0 0 0 3px rgba(207,165,91,.13),
+    0 18px 38px rgba(103,65,40,.14),
+    0 5px 16px rgba(229,107,47,.08);
+}
+
+.cm-card-image {
+  height: 225px;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  background: #f2e7da;
+}
+
+.cm-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  filter: saturate(.9) contrast(.96);
+  transition:
+    transform .75s cubic-bezier(.2,.8,.2,1),
+    filter .5s ease;
+}
+
+.cm-service-card:hover .cm-card-image img {
+  transform: scale(1.055);
+  filter: saturate(1.05) contrast(1);
+}
+
+/* 4. FLOATING ICON BADGES */
+.cm-card-image::after {
+  position: absolute;
+  bottom: -17px;
+  left: 19px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  border: 1px solid rgba(201,168,76,.35);
+  background: rgba(255,250,244,.97);
+  color: #e56b2f;
+  box-shadow: 0 5px 14px rgba(74,30,43,.10);
+  font-size: 24px;
+  line-height: 1;
+  z-index: 4;
+  backdrop-filter: blur(8px);
+}
+
+.cm-service-card:nth-child(1) .cm-card-image::after {
+  content: "◈";
+}
+
+.cm-service-card:nth-child(2) .cm-card-image::after {
+  content: "▤";
+}
+
+.cm-service-card:nth-child(3) .cm-card-image::after {
+  content: "↗";
+}
+
+/* 5. CARD CONTENT */
+.cm-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 37px 25px 36px;
+  min-height: 245px;
+}
+
+.cm-card-kicker {
+  color: #b0782f;
+  font-size: 9px;
+  letter-spacing: .2em;
+}
+
+.cm-card-content h3 {
+  color: #4a1e2b;
+  font-size: 32px;
+  line-height: 1.08;
+  margin: 12px 0;
+}
+
+.cm-card-content p {
+  color: #766b68;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.cm-card-arrow {
+  color: #e56b2f;
+  transition: transform .3s ease;
+}
+
+.cm-service-card:hover .cm-card-arrow {
+  transform: translate(5px,-3px);
+}
+
+/* 6. APPROACH PANEL — soft layered background */
+.cm-approach {
+  position: relative;
+  overflow: hidden;
+  margin: 24px 3vw 34px;
+  padding: 58px max(5vw, calc((100vw - 1240px)/2));
+  border-radius: 23px;
+  background:
+    radial-gradient(
+      ellipse at 100% 100%,
+      rgba(243,163,95,.17),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 0% 0%,
+      rgba(255,255,255,.95),
+      transparent 65%
+    ),
+    linear-gradient(
+      115deg,
+      #f7eee4,
+      #fffaf4 65%,
+      #f5e8da
+    );
+  border: 1px solid rgba(229,216,203,.65);
+}
+
+.cm-approach::after {
+  content: "";
+  position: absolute;
+  right: -7%;
+  bottom: -65%;
+  width: 62%;
+  height: 110%;
+  border: 1px solid rgba(201,168,76,.28);
+  border-radius: 50%;
+  transform: rotate(-9deg);
+  box-shadow:
+    0 -13px 0 -12px rgba(229,107,47,.2),
+    0 -28px 0 -27px rgba(201,168,76,.18);
+  pointer-events: none;
+}
+
+.cm-approach-title,
+.cm-approach-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* 7. CONTACT SECTION — subtle continuation */
+.cm-contact-strip {
+  background: linear-gradient(
+    180deg,
+    #fffaf4 0%,
+    #f8eee4 100%
+  );
+  padding-top: 72px;
+  padding-bottom: 76px;
+}
+
+/* 8. TABLET */
+@media (max-width: 900px) {
+  .cm-hero {
+    min-height: 620px;
+    padding: 145px 6vw 70px;
+  }
+
+  .cm-hero-art {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .88;
+    background-position: 58% center;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .cm-hero-inner {
+    width: min(760px,100%);
+    max-width: 760px;
+    margin-right: auto;
+  }
+
+  .cm-hero-title {
+    font-size: clamp(58px,8vw,86px) !important;
+  }
+
+  .cm-service-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+/* 9. MOBILE */
+@media (max-width: 620px) {
+  .cm-hero {
+    min-height: 690px;
+    padding: 135px 6vw 55px;
+    align-items: flex-start;
+  }
+
+  .cm-hero-art {
+    inset: 35% -18px 0;
+    width: auto;
+    height: 65%;
+    opacity: .92;
+    background-size: cover;
+    background-position: 67% center;
+    mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 22%
+    );
+    -webkit-mask-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      #000 22%
+    );
+  }
+
+  .cm-hero-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cm-hero-title {
+    font-size: clamp(53px,12.5vw,72px) !important;
+    line-height: .9 !important;
+  }
+
+  .cm-hero-copy {
+    font-size: 14px;
+    max-width: 410px;
+  }
+
+  .cm-hero-pillars {
+    gap: 13px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+  }
+
+  .cm-capabilities {
+    padding: 62px 6vw 72px;
+  }
+
+  .cm-section-heading h2 {
+    font-size: 42px;
+  }
+
+  .cm-service-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cm-card-image {
+    height: 225px;
+  }
+
+  .cm-card-content {
+    min-height: 220px;
+  }
+
+  .cm-approach {
+    margin: 16px 4vw 24px;
+    padding: 52px 7vw;
+    border-radius: 18px;
+  }
+
+  .cm-approach-points {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .cm-contact-strip {
+    padding: 55px 6vw;
+    display: block;
+  }
+}
+
+/* 10. ACCESSIBILITY — respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cm-service-card,
+  .cm-card-image img,
+  .cm-card-arrow,
+  .cm-card-shell {
+    transition: none !important;
+  }
+
+  .cm-service-card:hover {
+    transform: none !important;
+  }
+}
+
