@@ -119,8 +119,8 @@ R.jsx("span",{children:"Strategy"}),R.jsx("span",{children:"Creative"}),R.jsx("s
 ]}),
 R.jsxs("section",{id:"services",className:"cm-capabilities",children:[
 R.jsxs("div",{className:"cm-section-heading",children:[
-R.jsxs("div",{children:[R.jsx("div",{className:"cm-eyebrow",children:"What we bring together"}),R.jsx("h2",{children:"Integrated marketing for measurable growth"})]}),
-R.jsx("p",{children:"One connected view of your brand, your audience and the commercial outcomes that matter."})
+R.jsxs("div",{children:[R.jsx("div",{className:"cm-eyebrow",children:"Our capabilities"}),R.jsx("h2",{children:"What We Do"})]}),
+R.jsx("p",{children:"An integrated approach to brand, marketing and performance — built to create lasting business impact."})
 ]}),
 R.jsxs("div",{className:"cm-service-grid",children:[
 R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.7},className:"cm-service-card",children:R.jsxs("div",{className:"cm-card-shell",children:[
