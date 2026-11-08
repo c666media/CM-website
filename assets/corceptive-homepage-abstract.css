@@ -1019,3 +1019,47 @@ body:has(.cm-homepage) main{padding-top:0!important}
     animation: none !important;
   }
 }
+
+
+/* Match closing banner edges to the service-card grid on all screen sizes */
+.cm-approach {
+  box-sizing: border-box !important;
+  width: min(1400px, calc(100% - 12vw)) !important;
+  max-width: 1400px !important;
+  margin: 24px auto 0 !important;
+}
+
+.cm-proof-points {
+  box-sizing: border-box !important;
+  width: min(1400px, calc(100% - 12vw)) !important;
+  max-width: 1400px !important;
+  margin: 0 auto 44px !important;
+}
+
+/* Soften the approved wave artwork and lower the wave line within the banner */
+.cm-approach {
+  background-image:
+    linear-gradient(
+      rgba(255, 248, 239, .32),
+      rgba(255, 248, 239, .32)
+    ),
+    url('/approach-banner-waves.webp') !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: cover, cover !important;
+  background-position: center, center 100% !important;
+}
+
+@media (max-width: 900px) {
+  .cm-approach,
+  .cm-proof-points {
+    width: calc(100% - 12vw) !important;
+  }
+
+  .cm-approach {
+    margin: 24px auto 0 !important;
+  }
+
+  .cm-proof-points {
+    margin: 0 auto 36px !important;
+  }
+}
