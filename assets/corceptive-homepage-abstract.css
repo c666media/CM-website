@@ -1145,3 +1145,13 @@ body:has(.cm-homepage) .cm-approach {
 @media (max-width: 620px) {
   .cm-card-content { min-height: 230px !important; }
 }
+
+
+/* Hide the small strategy / creative / performance descriptor row beneath the Home hero copy */
+.cm-homepage .cm-hero-pillars {
+  display: none !important;
+}
+.cm-homepage .cm-hero-pillars span::before {
+  display: none !important;
+  content: none !important;
+}

@@ -170,3 +170,38 @@
 .benefit small{font-size:13px!important}
 .hero-note,.ticker-note,.partner-note,.partner-copy small,.tiny{font-size:11px!important}
 .content-head span,.status,.ref,.chips span,.chip,.op-meta{font-size:11px!important}
+
+
+/* Remove the Careers hero supporting descriptor and its decorative lead-in */
+.hero-note,
+.hero-note::before,
+.hero-note::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove the two decorative rules above the Careers "Choose your path" cards */
+.section-head::before,
+.section-head::after,
+.section-head .section-rule,
+.section-head .heading-rule,
+.section-head .title-rule,
+.section-head .accent-line,
+.section-head .divider-line {
+  display: none !important;
+  content: none !important;
+}
+
+/* Give Careers opportunity photography a clearer, richer finish.
+   This improves perceived contrast; source-image resolution remains unchanged. */
+.op-card img {
+  display: block;
+  filter: saturate(1.16) contrast(1.10) brightness(1.025);
+  image-rendering: auto;
+  backface-visibility: hidden;
+  transition: filter .35s ease, transform .45s ease;
+}
+.op-card:hover img,
+.op-card:focus-within img {
+  filter: saturate(1.20) contrast(1.12) brightness(1.035);
+}
