@@ -295,24 +295,25 @@
                 padding: 22px;
             }
         }
-    </style>
+    
+/* Shared Careers header: match the main Careers page and remain fixed at the top while scrolling. */
+.cm-careers-header{height:78px!important;min-height:78px;background:#fffaf4f2!important;border-bottom:1px solid #eadfd4!important;position:sticky!important;top:0!important;z-index:1000!important;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.cm-careers-header .nav{height:100%;width:min(1380px,92vw);margin:auto;padding:0;display:flex;align-items:center;justify-content:space-between;gap:25px;background:transparent}
+.cm-careers-header .brand{display:flex;align-items:center;gap:11px;color:#4a1e2b;font:inherit}
+.cm-careers-header .brand img{width:43px;height:43px;object-fit:contain}
+.cm-careers-header .brand span{font:600 27px 'Cormorant Garamond',Georgia,serif;letter-spacing:.005em;color:#4a1e2b}
+.cm-careers-header .navlinks{display:flex;align-items:center;gap:29px}
+.cm-careers-header .navlinks a{font:800 10px 'Manrope',Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5b4c4b;text-decoration:none}
+.cm-careers-header .navlinks a:hover,.cm-careers-header .navlinks a[aria-current=page]{color:#e56b2f}
+.cm-careers-header .menu{display:none;background:transparent;border:1px solid #e5d8cb;padding:10px 13px;color:#4a1e2b;font:800 10px 'Manrope',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+@media(max-width:680px){.cm-careers-header .nav{width:92vw}.cm-careers-header .brand img{width:39px;height:39px}.cm-careers-header .brand span{font-size:23px}.cm-careers-header .menu{display:block}.cm-careers-header .navlinks{display:none;position:absolute;top:78px;left:0;right:0;padding:13px 6vw 22px;background:rgba(255,250,244,.98);border-bottom:1px solid #eadfd4;box-shadow:0 12px 24px rgba(74,30,43,.08);flex-direction:column;align-items:stretch;gap:0}.cm-careers-header .navlinks.open{display:flex}.cm-careers-header .navlinks a{padding:14px 0;border-bottom:1px solid #eadfd4}.cm-careers-header .navlinks a:last-child{border-bottom:0}}
+</style>
 <link rel="stylesheet" href="/careers/careers-typography.css?v=20261107-1">
 </head>
 
 <body>
 
-    <header>
-        <div class="nav">
-            <a class="brand" href="/careers/">
-                <img src="../../Corceptive_Media_Logo.png" alt="">
-                <span>Corceptive Media</span>
-            </a>
-
-            <a class="back" href="/careers/">
-                ← All opportunities
-            </a>
-        </div>
-    </header>
+    <header class="cm-careers-header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" alt=""><span>Corceptive Media</span></a><button class="menu" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/about">About</a><a href="/careers/" aria-current="page">Careers</a><a href="/services">Services</a><a href="/contact">Contact</a></nav></div></header>
 
     <main id="root">
         <div class="state">
@@ -666,5 +667,7 @@
         })();
     </script>
 
+
+<script>(function(){var header=document.querySelector('.cm-careers-header');if(!header)return;var menu=header.querySelector('.menu'),nav=header.querySelector('.navlinks');if(!menu||!nav)return;menu.addEventListener('click',function(){var open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'Close':'Menu';});nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='Menu';});});})();</script>
 </body>
 </html>
