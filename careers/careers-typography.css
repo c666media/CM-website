@@ -10,7 +10,7 @@
 
 .eyebrow,
 .back {
-    font-size: 11px !important;
+    font-size: 12px !important;
     line-height: 1.55 !important;
 }
 
@@ -31,7 +31,7 @@
 .chips span,
 .chip,
 .op-meta {
-    font-size: 10px !important;
+    font-size: 11px !important;
     line-height: 1.5 !important;
 }
 
@@ -43,14 +43,14 @@
 .empty p,
 .side-card p,
 .state p {
-    font-size: 13px !important;
+    font-size: 14px !important;
     line-height: 1.8 !important;
 }
 
 /* Benefit captions, partner notes and small references */
 .benefit small,
 .partners-head p {
-    font-size: 12px !important;
+    font-size: 13px !important;
     line-height: 1.65 !important;
 }
 
@@ -58,13 +58,13 @@
 .ticker-note,
 .partner-note,
 .partner-copy small {
-    font-size: 10px !important;
+    font-size: 12px !important;
     line-height: 1.65 !important;
 }
 
 /* Opportunity detail reference text */
 .tiny {
-    font-size: 10px !important;
+    font-size: 11px !important;
     line-height: 1.6 !important;
 }
 
@@ -95,7 +95,7 @@
 
 /* Partner strip — clearer labels and logo-ready marks */
 .partners-head p {
-    font-size: 13px !important;
+    font-size: 14px !important;
     line-height: 1.75 !important;
 }
 
@@ -161,6 +161,12 @@
     border-radius: 15px;
     background: rgba(255, 253, 249, .46);
     color: var(--muted, #766b68);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7;
 }
+
+/* One-point readability increase for descriptive copy and supporting text only. Headings, titles, navigation and buttons stay unchanged. */
+.section-head .sub,.op-card p,.listing p,.hero p.desc,.empty p,.side-card p,.state p,.partners-head p,.partner-empty{font-size:14px!important}
+.benefit small{font-size:13px!important}
+.hero-note,.ticker-note,.partner-note,.partner-copy small,.tiny{font-size:11px!important}
+.content-head span,.status,.ref,.chips span,.chip,.op-meta{font-size:11px!important}
