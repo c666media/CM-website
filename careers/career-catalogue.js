@@ -78,22 +78,21 @@
     }).slice(0, 4);
   }
 
-  function card(item) {
+ function card(item) {
     var id = item.listing_id || item.slug || '';
     var title = item.title || 'Opportunity';
     var description = item.short_description || 'View the full listing for more information.';
     var status = item.effective_status || 'Open';
     var tags = chips(item);
 
-    return '<article class="listing"><div class="listing-top"><span class="status">' + esc(status) + '</span><span class="ref">' +
-      (type === 'early-career' ? 'EXTERNAL OPPORTUNITY' : esc(type.replace('-', ' ').toUpperCase())) +
+    return '<article class="listing"><div class="listing-top"><span class="status">' + esc(status) +
       '</span></div><h2>' + esc(title) + '</h2><p>' + esc(description) +
       '</p><div class="chips">' + tags.map(function (tag) {
         return '<span>' + esc(tag) + '</span>';
       }).join('') + '</div><a class="listing-link" href="../opportunity/?type=' +
       encodeURIComponent(type) + '&id=' + encodeURIComponent(id) +
       '">View opportunity <b>↗</b></a></article>';
-  }
+}
 
   function load() {
     var callback = 'cmCareerCatalogueCallback';
