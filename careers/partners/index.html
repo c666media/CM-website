@@ -52,6 +52,8 @@ body header.cm-careers-header .menu{display:none!important;background:transparen
  body header.cm-careers-header .navlinks a{padding:13px 0!important;border-bottom:1px solid #eadfd4!important;}
  body header.cm-careers-header .navlinks a:last-child{border-bottom:0!important;}
 }
+
+.field-hint{display:block;margin-top:6px;color:#8a7168;font-size:11px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -79,7 +81,7 @@ body header.cm-careers-header .menu{display:none!important;background:transparen
 <div class="form-copy"><div class="eyebrow">Let's explore a fit</div><h2>Tell us what you have in mind.</h2><p>Share a few details and our team can understand the opportunity before arranging a conversation. You do not need a fully formed proposal to get in touch.</p><div class="form-note"><strong>What happens next?</strong><br>We review your enquiry, identify the relevant collaboration route and follow up if there is a potential fit. Submitting this form does not create a partnership or commit either party to commercial terms.</div></div>
 <form class="form" id="partnership-form"><h3>Partnership enquiry</h3><div class="fields">
 <div class="field"><label for="org">Organisation name *</label><input id="org" name="organisation" required placeholder="Your organisation"></div>
-<div class="field"><label for="site">Website</label><input id="site" name="website" type="url" placeholder="https://"></div>
+<div class="field"><label for="site">Website</label><input id="site" name="website" type="text" inputmode="url" autocomplete="url" placeholder="www.yourwebsite.com" aria-describedby="website-hint"><small id="website-hint" class="field-hint">Enter your domain with or without https://</small></div>
 <div class="field"><label for="person">Your name *</label><input id="person" name="name" required placeholder="Full name"></div>
 <div class="field"><label for="email">Work email *</label><input id="email" name="email" type="email" required placeholder="name@organisation.com"></div>
 <div class="field"><label for="role">Your role</label><input id="role" name="role" placeholder="e.g. Director, Partnerships"></div>
@@ -109,16 +111,36 @@ body header.cm-careers-header .menu{display:none!important;background:transparen
       menu.textContent = 'Menu';
     });
   });
+  const websiteField = document.getElementById('site');
+  function normaliseWebsite(value) {
+    const trimmed = value.trim();
+    if (!trimmed) return '';
+    const candidate = /^[a-z][a-z0-9+.-]*:\/\//i.test(trimmed) ? trimmed : 'https://' + trimmed;
+    try {
+      const parsed = new URL(candidate);
+      if (!parsed.hostname || !parsed.hostname.includes('.') || /\s/.test(parsed.hostname)) return null;
+      return parsed.href;
+    } catch (error) { return null; }
+  }
+
   const accessKey = '6ab9fcd9-d31d-4bd2-89cd-7c6bd96e5166';
 
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
     if (!form.reportValidity()) return;
+    const websiteValue = normaliseWebsite(websiteField.value);
+    if (websiteValue === null) {
+      websiteField.setCustomValidity('Enter a valid website, such as www.example.com.');
+      websiteField.reportValidity();
+      return;
+    }
+    websiteField.setCustomValidity('');
     submit.disabled = true;
     submit.textContent = 'Sending...';
     notice.hidden = true;
 
     const payload = Object.fromEntries(new FormData(form).entries());
+    payload.website = websiteValue;
     payload.access_key = accessKey;
     payload.subject = 'New Partnership Enquiry - Corceptive Media';
     payload.from_name = 'Corceptive Media Partnerships';
