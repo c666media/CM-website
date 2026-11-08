@@ -9,20 +9,17 @@ body:has(.cm-homepage) header nav a:hover{color:var(--cm-orange)!important}
 body:has(.cm-homepage) header span{color:var(--cm-wine)!important}
 body:has(.cm-homepage) main{padding-top:0!important}
 .cm-hero{position:relative;isolation:isolate;min-height:660px;padding:190px max(6vw,calc((100vw - 1240px)/2)) 84px;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 72% 35%,#f4dfc8 0%,transparent 48%),linear-gradient(120deg,#fffaf4 0%,#fbf2e8 55%,#f4e5d5 100%)}
-.cm-hero-art{
-  position:absolute;
-  z-index:-1;
-  right:-2%;
-  top:5%;
-  width:64%;
-  height:94%;
-  background-image:url('/corceptive-abstract-hero-wide.webp');
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  opacity:.98;
-  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.16) 8%,#000 28%);
-  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.16) 8%,#000 28%);
+.cm-hero-art {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url('/corceptive-abstract-hero-wide.webp');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  mask-image: none;
+  -webkit-mask-image: none;
 }
 .cm-hero-inner{width:min(1240px,100%);margin:0 auto;position:relative;z-index:1;max-width:690px}
 .cm-eyebrow{font-size:10px;line-height:1.5;font-weight:800;letter-spacing:.23em;text-transform:uppercase;color:var(--cm-orange)}
