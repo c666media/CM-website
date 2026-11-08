@@ -933,3 +933,89 @@ body:has(.cm-homepage) main{padding-top:0!important}
     padding: 0 !important;
   }
 }
+
+
+/* Approved flowing-wave artwork for the closing statement panel */
+.cm-approach {
+  background-color: #fff4e8 !important;
+  background-image: url('/approach-banner-waves.webp') !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center 76% !important;
+}
+
+.cm-approach::before,
+.cm-approach::after {
+  display: none !important;
+}
+
+/* Ultra-wide closing panel alignment — use the same centred frame as the hero */
+@media (min-width: 1921px) {
+  .cm-approach {
+    width: min(1360px, calc(100% - 12vw)) !important;
+    max-width: 1360px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cm-proof-points {
+    width: min(1360px, calc(100% - 12vw)) !important;
+    max-width: 1360px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Increase the featured middle-card light: richer below, soft around the edges */
+.cm-service-card:nth-child(2) .cm-card-shell {
+  box-shadow:
+    0 0 0 1px rgba(238, 126, 65, .28),
+    0 0 18px rgba(244, 105, 43, .22),
+    0 -6px 17px -7px rgba(244, 105, 43, .22),
+    0 14px 27px -10px rgba(244, 105, 43, .32) !important;
+}
+
+.cm-service-card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  right: -7px;
+  top: -9px;
+  bottom: -17px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 22px;
+  background: radial-gradient(
+    ellipse at 50% 70%,
+    rgba(244, 105, 43, .2) 0%,
+    rgba(244, 105, 43, .13) 42%,
+    rgba(244, 105, 43, .05) 68%,
+    transparent 84%
+  );
+  filter: blur(15px);
+  opacity: .95;
+}
+
+.cm-service-card:nth-child(2)::after {
+  left: 2% !important;
+  right: 2% !important;
+  height: 88px !important;
+  bottom: -46px !important;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(244, 105, 43, .62) 0%,
+    rgba(244, 105, 43, .4) 30%,
+    rgba(244, 105, 43, .2) 54%,
+    rgba(244, 105, 43, .08) 70%,
+    transparent 86%
+  ) !important;
+  filter: blur(18px) !important;
+  opacity: 1 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cm-service-card:nth-child(2)::before,
+  .cm-service-card:nth-child(2)::after {
+    animation: none !important;
+  }
+}
