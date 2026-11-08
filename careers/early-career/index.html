@@ -27,6 +27,35 @@ header{height:76px;background:#fffaf4ed;border-bottom:1px solid var(--line)}.nav
 .cm-careers-header .navlinks a:hover,.cm-careers-header .navlinks a[aria-current=page]{color:#e56b2f}
 .cm-careers-header .menu{display:none;background:transparent;border:1px solid #e5d8cb;padding:10px 13px;color:#4a1e2b;font:800 10px 'Manrope',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
 @media(max-width:680px){.cm-careers-header .nav{width:92vw}.cm-careers-header .brand img{width:39px;height:39px}.cm-careers-header .brand span{font-size:23px}.cm-careers-header .menu{display:block}.cm-careers-header .navlinks{display:none;position:absolute;top:78px;left:0;right:0;padding:13px 6vw 22px;background:rgba(255,250,244,.98);border-bottom:1px solid #eadfd4;box-shadow:0 12px 24px rgba(74,30,43,.08);flex-direction:column;align-items:stretch;gap:0}.cm-careers-header .navlinks.open{display:flex}.cm-careers-header .navlinks a{padding:14px 0;border-bottom:1px solid #eadfd4}.cm-careers-header .navlinks a:last-child{border-bottom:0}}
+
+/* Corceptive Careers shared floating glass header — consistent and sticky on every Careers route. */
+body header.cm-careers-header{
+  position:sticky!important;top:14px!important;left:auto!important;right:auto!important;transform:none!important;
+  display:block!important;width:min(1380px,94vw)!important;height:76px!important;min-height:76px!important;
+  margin:14px auto 0!important;padding:0!important;z-index:1000!important;
+  border:1px solid rgba(255,255,255,.9)!important;border-radius:16px!important;
+  background:rgba(255,250,244,.82)!important;
+  box-shadow:0 12px 34px rgba(28,10,21,.16),inset 0 1px rgba(255,255,255,.92)!important;
+  backdrop-filter:blur(20px) saturate(145%)!important;-webkit-backdrop-filter:blur(20px) saturate(145%)!important;
+}
+body header.cm-careers-header .nav{height:100%!important;width:94%!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:25px!important;background:transparent!important;}
+body header.cm-careers-header .brand{display:flex!important;align-items:center!important;gap:11px!important;color:#4a1e2b!important;text-decoration:none!important;}
+body header.cm-careers-header .brand img{width:43px!important;height:43px!important;object-fit:contain!important;}
+body header.cm-careers-header .brand span{font:600 27px 'Cormorant Garamond',Georgia,serif!important;letter-spacing:.005em!important;color:#4a1e2b!important;}
+body header.cm-careers-header .navlinks{display:flex!important;align-items:center!important;gap:29px!important;}
+body header.cm-careers-header .navlinks a{font:800 10px 'Manrope',Arial,sans-serif!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:#5b4c4b!important;text-decoration:none!important;}
+body header.cm-careers-header .navlinks a:hover,body header.cm-careers-header .navlinks a[aria-current=page]{color:#e56b2f!important;}
+body header.cm-careers-header .menu{display:none!important;background:transparent!important;border:1px solid #e5d8cb!important;border-radius:4px!important;padding:10px 13px!important;color:#4a1e2b!important;font:800 10px 'Manrope',Arial,sans-serif!important;letter-spacing:.14em!important;text-transform:uppercase!important;}
+@media(max-width:680px){
+ body header.cm-careers-header{width:94vw!important;height:68px!important;min-height:68px!important;top:8px!important;margin-top:8px!important;border-radius:13px!important;}
+ body header.cm-careers-header .brand img{width:37px!important;height:37px!important;}
+ body header.cm-careers-header .brand span{font-size:22px!important;}
+ body header.cm-careers-header .menu{display:block!important;}
+ body header.cm-careers-header .navlinks{display:none!important;position:absolute!important;top:calc(100% + 8px)!important;left:0!important;right:0!important;width:100%!important;padding:13px 6vw 20px!important;background:rgba(255,250,244,.97)!important;border:1px solid #eadfd4!important;border-radius:12px!important;box-shadow:0 12px 28px rgba(28,10,21,.14)!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;}
+ body header.cm-careers-header .navlinks.open{display:flex!important;}
+ body header.cm-careers-header .navlinks a{padding:13px 0!important;border-bottom:1px solid #eadfd4!important;}
+ body header.cm-careers-header .navlinks a:last-child{border-bottom:0!important;}
+}
 </style><link rel="stylesheet" href="/careers/careers-typography.css?v=20261107-1">
 </head><body>
 <header class="cm-careers-header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" alt=""><span>Corceptive Media</span></a><button class="menu" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/about">About</a><a href="/careers/" aria-current="page">Careers</a><a href="/services">Services</a><a href="/contact">Contact</a></nav></div></header>
