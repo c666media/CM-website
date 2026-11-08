@@ -651,3 +651,22 @@ body:has(.cm-homepage) main{padding-top:0!important}
     font-size: 35px !important;
   }
 }
+
+
+/* Ultra-wide alignment: keep the hero copy on the same visual grid as the service cards */
+@media (min-width: 1921px) {
+  .cm-hero-inner {
+    width: min(1360px, 100%) !important;
+    max-width: 1360px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cm-hero-title {
+    max-width: 1120px;
+  }
+
+  .cm-hero-copy {
+    max-width: 610px !important;
+  }
+}
