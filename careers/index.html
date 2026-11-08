@@ -983,6 +983,54 @@ body .hero .hero-visual {
     max-width: 420px !important;
   }
 }
+
+/* CAREERS HERO A — VISIBILITY AND FADE FIX */
+body .hero {
+  background: #fffaf4 !important;
+}
+body .hero::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  top: auto !important;
+  width: 100% !important;
+  height: 245px !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  opacity: 1 !important;
+  border-radius: 0 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255,250,244,0) 0%,
+    rgba(255,250,244,.18) 30%,
+    rgba(255,250,244,.72) 68%,
+    #fffaf4 100%
+  ) !important;
+}
+body .hero h1 em {
+  color: #e65f22 !important;
+  -webkit-text-fill-color: #e65f22 !important;
+  background: none !important;
+  background-image: none !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 0 rgba(255,250,244,.35) !important;
+}
+body .benefits {
+  position: relative !important;
+  background: #fffaf4 !important;
+  margin-top: 0 !important;
+  padding-top: 22px !important;
+}
+@media (max-width: 680px) {
+  body .hero::after {
+    height: 190px !important;
+  }
+  body .benefits {
+    padding-top: 16px !important;
+  }
+}
 </style>
 
 </head>
