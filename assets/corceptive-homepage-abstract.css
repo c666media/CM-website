@@ -1093,3 +1093,55 @@ body:has(.cm-homepage) .cm-approach {
     width: calc(100vw - 12vw) !important;
   }
 }
+
+
+/* Service cards: balanced copy, consistent card rhythm and aligned arrows */
+.cm-service-grid { align-items: stretch !important; }
+.cm-service-card { height: 100% !important; }
+.cm-card-shell {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.cm-card-image::after {
+  width: 52px !important;
+  height: 52px !important;
+  bottom: -20px !important;
+  left: 20px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 252, 247, .98) !important;
+  border: 1px solid rgba(201, 168, 76, .28) !important;
+  box-shadow: 0 5px 16px rgba(74, 30, 43, .09) !important;
+}
+.cm-card-content {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  min-height: 258px !important;
+  padding: 38px 25px 22px !important;
+}
+.cm-card-content h3 {
+  min-height: 1.08em;
+  margin-bottom: 10px !important;
+}
+.cm-card-content p {
+  flex: 1 1 auto !important;
+  margin: 0 !important;
+  line-height: 1.72 !important;
+  max-width: 100%;
+}
+.cm-card-arrow {
+  position: static !important;
+  display: block !important;
+  align-self: flex-end !important;
+  margin-top: 16px !important;
+  line-height: 1 !important;
+  padding-right: 2px;
+  transform: none !important;
+}
+.cm-service-card:hover .cm-card-arrow {
+  transform: translateX(4px) !important;
+}
+@media (max-width: 620px) {
+  .cm-card-content { min-height: 230px !important; }
+}
