@@ -522,7 +522,7 @@
                 );
 
                 details += section(
-                    'Compensation',
+                    type === 'projects' ? 'Programme enrollment' : 'Compensation',
                     item.compensation_details ||
                     item.salary_range ||
                     item.compensation_type,
