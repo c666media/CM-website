@@ -546,3 +546,108 @@ body:has(.cm-homepage) main{padding-top:0!important}
     margin: 22px 0 24px;
   }
 }
+
+
+/* Desktop proportion pass — match the full-height editorial reference */
+@media (min-width: 901px) {
+  body:has(.cm-homepage) header {
+    width: min(1760px, 94vw) !important;
+    height: 82px !important;
+    top: 18px !important;
+  }
+
+  body:has(.cm-homepage) header > div:first-child {
+    padding: 0 38px !important;
+  }
+
+  body:has(.cm-homepage) header nav a {
+    font-size: 12px !important;
+    letter-spacing: .16em !important;
+  }
+
+  .cm-hero {
+    min-height: 880px !important;
+    padding: 222px 6vw 112px !important;
+  }
+
+  .cm-hero-inner {
+    width: min(1100px, 100%) !important;
+    max-width: 1100px !important;
+  }
+
+  .cm-hero-copy {
+    font-size: 18px !important;
+    line-height: 1.8 !important;
+    max-width: 610px !important;
+  }
+
+  .cm-hero-copy::before {
+    width: 82px;
+    margin: 32px 0 34px;
+  }
+
+  .cm-hero-pillars {
+    gap: 24px !important;
+    margin-top: 48px !important;
+  }
+
+  .cm-hero-pillars span {
+    font-size: 12px !important;
+    letter-spacing: .16em !important;
+  }
+
+  .cm-capabilities {
+    padding: 96px 6vw 112px !important;
+  }
+
+  .cm-section-heading {
+    display: grid !important;
+    grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+    align-items: center !important;
+    gap: 0 !important;
+    max-width: 1480px !important;
+    margin: 0 auto 76px !important;
+  }
+
+  .cm-section-heading > div {
+    min-width: 0;
+    padding-right: 44px;
+  }
+
+  .cm-section-heading .cm-eyebrow {
+    font-size: 12px !important;
+    letter-spacing: .2em !important;
+  }
+
+  .cm-section-heading h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: clamp(58px, 5.2vw, 78px) !important;
+    line-height: .98 !important;
+    font-weight: 500 !important;
+    letter-spacing: -.035em !important;
+    margin-top: 20px !important;
+  }
+
+  .cm-section-heading > p {
+    max-width: none !important;
+    margin: 0 !important;
+    border-left: 2px solid var(--cm-gold);
+    padding: 28px 0 28px 66px;
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+    color: #756966;
+  }
+
+  .cm-service-grid {
+    max-width: 1400px !important;
+    gap: 24px !important;
+  }
+
+  .cm-card-image {
+    height: 250px !important;
+  }
+
+  .cm-card-content h3 {
+    font-size: 35px !important;
+  }
+}
