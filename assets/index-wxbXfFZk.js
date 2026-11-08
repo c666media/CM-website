@@ -138,13 +138,47 @@ R.jsxs("div",{className:"cm-card-content",children:[R.jsx("span",{className:"cm-
 ]})
 ]}),
 R.jsxs("section",{className:"cm-approach",children:[
-R.jsxs("div",{className:"cm-approach-title",children:[R.jsx("div",{className:"cm-eyebrow",children:"The Corceptive approach"}),R.jsxs("h2",{children:["Strategy.",R.jsx("br",{}),"Creativity.",R.jsx("br",{}),R.jsx("span",{children:"Results."})]})]}),
-R.jsxs("div",{className:"cm-approach-body",children:[
-R.jsx("p",{children:"We bring together brand, creative and performance to create meaningful momentum — with clarity, intent and a focus on what truly moves the needle."}),
+R.jsxs("div",{className:"cm-approach-title",children:[
+R.jsxs("h2",{children:["Strategy.",R.jsx("br",{}),"Execution.",R.jsx("br",{}),R.jsx("span",{children:"Growth."})]})
+]}),
+R.jsx("div",{className:"cm-approach-body",children:
+R.jsx("p",{children:"A marketing partner for brands that value clarity, creativity and compounding results."})
+})
+]}),
+R.jsxs("section",{className:"cm-proof-points",children:[
 R.jsxs("div",{className:"cm-approach-points",children:[
-R.jsxs("div",{children:[R.jsx("span",{children:"01"}),R.jsx("strong",{children:"Strategic thinking"})]}),
-R.jsxs("div",{children:[R.jsx("span",{children:"02"}),R.jsx("strong",{children:"Creative execution"})]}),
-R.jsxs("div",{children:[R.jsx("span",{children:"03"}),R.jsx("strong",{children:"Business impact"})]})
+R.jsxs("div",{className:"cm-approach-point",children:[
+R.jsx("div",{className:"cm-point-icon",children:R.jsx("svg",{viewBox:"0 0 32 32",width:"34",height:"34",fill:"none",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round",children:[
+R.jsx("circle",{cx:"13",cy:"19",r:"9"}),
+R.jsx("circle",{cx:"13",cy:"19",r:"4.5"}),
+R.jsx("path",{d:"M13 19 26 6m-6 0h6v6"}),
+R.jsx("circle",{cx:"13",cy:"19",r:"1",fill:"currentColor",stroke:"none"})
+]})}),
+R.jsxs("div",{className:"cm-point-copy",children:[
+R.jsx("strong",{children:"Brand Clarity"}),
+R.jsx("small",{children:"A sharper, more distinctive brand presence."})
+]})
+]}),
+R.jsxs("div",{className:"cm-approach-point",children:[
+R.jsx("div",{className:"cm-point-icon",children:R.jsx("svg",{viewBox:"0 0 32 32",width:"34",height:"34",fill:"none",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round",children:[
+R.jsx("path",{d:"m3 10 13-7 13 7-13 7L3 10Z"}),
+R.jsx("path",{d:"m3 16 13 7 13-7"}),
+R.jsx("path",{d:"m3 22 13 7 13-7"})
+]})}),
+R.jsxs("div",{className:"cm-point-copy",children:[
+R.jsx("strong",{children:"Integrated Marketing"}),
+R.jsx("small",{children:"Connected journeys across every channel."})
+]})
+]}),
+R.jsxs("div",{className:"cm-approach-point",children:[
+R.jsx("div",{className:"cm-point-icon",children:R.jsx("svg",{viewBox:"0 0 32 32",width:"34",height:"34",fill:"none",stroke:"currentColor",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round",children:[
+R.jsx("path",{d:"M4 28V19h5v9M13 28V12h5v16M22 28V5h5v23"}),
+R.jsx("path",{d:"m4 24 8-5 7-7 8-7m-6 0h6v6"})
+]})}),
+R.jsxs("div",{className:"cm-point-copy",children:[
+R.jsx("strong",{children:"Measurable Impact"}),
+R.jsx("small",{children:"Outcomes that move the business forward."})
+]})
 ]})
 ]})
 ]}),
