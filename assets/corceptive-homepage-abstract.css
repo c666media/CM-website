@@ -1063,3 +1063,33 @@ body:has(.cm-homepage) main{padding-top:0!important}
     margin: 0 auto 36px !important;
   }
 }
+
+
+/* Correct Preview 2 composition: exact card-grid width and full-panel wave fit */
+body:has(.cm-homepage) .cm-approach,
+body:has(.cm-homepage) .cm-proof-points {
+  box-sizing: border-box !important;
+  width: min(1400px, calc(100vw - 12vw)) !important;
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body:has(.cm-homepage) .cm-approach {
+  background-image:
+    linear-gradient(
+      rgba(255, 248, 239, .46),
+      rgba(255, 248, 239, .46)
+    ),
+    url('/approach-banner-waves.webp') !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: 100% 100%, 100% 100% !important;
+  background-position: center bottom, center bottom !important;
+}
+
+@media (max-width: 900px) {
+  body:has(.cm-homepage) .cm-approach,
+  body:has(.cm-homepage) .cm-proof-points {
+    width: calc(100vw - 12vw) !important;
+  }
+}
