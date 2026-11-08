@@ -670,3 +670,71 @@ body:has(.cm-homepage) main{padding-top:0!important}
     max-width: 610px !important;
   }
 }
+
+
+/* Feature the core service: persistent, contained orange flare on the centre card */
+.cm-service-card {
+  position: relative;
+}
+
+.cm-service-card:nth-child(2) {
+  z-index: 3;
+}
+
+.cm-service-card:nth-child(2) .cm-card-shell {
+  border-color: rgba(238, 126, 65, .9);
+  box-shadow:
+    0 0 0 1px rgba(238, 126, 65, .22),
+    0 7px 22px rgba(74, 30, 43, .055);
+}
+
+/* Soft light sits below the featured card only, never across its neighbours */
+.cm-service-card:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 58px;
+  bottom: -31px;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(244, 105, 43, .38) 0%,
+    rgba(244, 105, 43, .2) 34%,
+    rgba(244, 105, 43, .07) 58%,
+    transparent 78%
+  );
+  filter: blur(13px);
+  opacity: .86;
+  animation: cm-featured-card-flare 5.2s ease-in-out infinite;
+}
+
+@keyframes cm-featured-card-flare {
+  0%, 100% {
+    transform: translateX(-5px) scaleX(.92);
+    opacity: .72;
+  }
+  50% {
+    transform: translateX(5px) scaleX(1.04);
+    opacity: 1;
+  }
+}
+
+/* Straight editorial arrows */
+.cm-card-arrow {
+  font-size: 32px !important;
+  line-height: 1 !important;
+  transform: none !important;
+}
+
+.cm-service-card:hover .cm-card-arrow {
+  transform: translateX(4px) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cm-service-card:nth-child(2)::after {
+    animation: none !important;
+  }
+}
