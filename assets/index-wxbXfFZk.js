@@ -183,7 +183,7 @@ R.jsx("small",{children:"Outcomes that move the business forward."})
 ]})
 ]}),
 
-]})}function $M(){return R.jsxs("div",{className:"cm-about cm-about-screen",children:[
+]})}function $M(){E.useEffect(()=>{let n=!0;Promise.all(Array.from({length:7},(_,i)=>fetch("/assets/about-hero-parts/part-"+String(i).padStart(2,"0")+".txt").then(r=>{if(!r.ok)throw Error("Hero artwork chunk unavailable");return r.text()}))).then(parts=>{if(!n)return;const el=document.querySelector(".cm-about-screen-photo");if(el)el.style.backgroundImage='url("data:image/webp;base64,'+parts.join("")+'")'}).catch(()=>{});return()=>{n=!1}},[]);return R.jsxs("div",{className:"cm-about cm-about-screen",children:[
 R.jsx("section",{className:"cm-about-screen-hero",children:[
 R.jsx("div",{className:"cm-about-screen-photo","aria-hidden":"true"}),
 R.jsxs("div",{className:"cm-about-screen-content",children:[
