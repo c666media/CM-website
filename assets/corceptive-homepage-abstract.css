@@ -605,7 +605,7 @@ body:has(.cm-homepage) main{padding-top:0!important}
     grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
     align-items: center !important;
     gap: 0 !important;
-    max-width: 1480px !important;
+    max-width: 1400px !important;
     margin: 0 auto 76px !important;
   }
 
