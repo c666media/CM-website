@@ -1410,3 +1410,53 @@ body:has(.cm-about) {
 @media(prefers-reduced-motion:reduce) {
   .cm-about-screen * { scroll-behavior:auto!important; }
 }
+
+
+/* CONTACT — use the same floating glass header as Home */
+body:has(.cm-contact-page) header {
+  position:fixed!important;
+  top:14px!important;
+  left:50%!important;
+  transform:translateX(-50%)!important;
+  width:min(1380px,94vw)!important;
+  height:76px!important;
+  border:1px solid rgba(255,255,255,.9)!important;
+  border-radius:16px!important;
+  background:rgba(255,250,244,.82)!important;
+  box-shadow:0 12px 34px rgba(45,20,29,.13),inset 0 1px rgba(255,255,255,.9)!important;
+  backdrop-filter:blur(20px) saturate(145%)!important;
+  -webkit-backdrop-filter:blur(20px) saturate(145%)!important;
+}
+body:has(.cm-contact-page) header>div:first-child {
+  height:100%!important;
+  padding:0 28px!important;
+}
+body:has(.cm-contact-page) header nav a {
+  color:#554747!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+}
+body:has(.cm-contact-page) header nav a:hover { color:#e9632b!important; }
+body:has(.cm-contact-page) header span { color:#4a1e2b!important; }
+
+@media(min-width:901px) {
+  body:has(.cm-contact-page) header {
+    width:min(1760px,94vw)!important;
+    height:82px!important;
+    top:18px!important;
+  }
+  body:has(.cm-contact-page) header>div:first-child { padding:0 38px!important; }
+  body:has(.cm-contact-page) header nav a {
+    font-size:12px!important;
+    letter-spacing:.16em!important;
+  }
+}
+@media(max-width:620px) {
+  body:has(.cm-contact-page) header {
+    top:8px!important;
+    width:94vw!important;
+    height:66px!important;
+  }
+  body:has(.cm-contact-page) header>div:first-child { padding:0 14px!important; }
+}
