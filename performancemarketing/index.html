@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf4">
+
+  <title>Performance Marketing | Corceptive Media</title>
+  <meta name="description" content="Reach the right customers, generate meaningful enquiries and grow sales with performance marketing, paid advertising and campaign strategy from Corceptive Media.">
+  <link rel="canonical" href="https://corceptivemedia.com/performancemarketing/">
+  <link rel="icon" type="image/x-icon" href="/cmfavicon.ico">
+
+  <meta property="og:title" content="Performance Marketing | Corceptive Media">
+  <meta property="og:description" content="Strategy, creative and paid advertising built around your business goals.">
+  <meta property="og:url" content="https://corceptivemedia.com/performancemarketing/">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #fffaf4;
+      --pale: #f7efe5;
+      --wine: #4a1e2b;
+      --ink: #2c2224;
+      --muted: #766b68;
+      --orange: #e56b2f;
+      --gold: #c9a84c;
+      --line: #e5d8cb;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Manrope', Arial, sans-serif;
+      --page-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body, button, a {
+      font-family: var(--sans);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .wrap {
+      width: min(var(--page-width), 90vw);
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .18em;
+      line-height: 1.6;
+      text-transform: uppercase;
+    }
+
+    /* Header */
+
+    .cm-careers-header {
+      height: 78px;
+      min-height: 78px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 250, 244, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .cm-careers-header .nav {
+      width: min(1380px, 92vw);
+      height: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .cm-careers-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--wine);
+      flex-shrink: 0;
+    }
+
+    .cm-careers-header .brand img {
+      display: block;
+      width: 43px;
+      height: 43px;
+      object-fit: contain;
+    }
+
+    .cm-careers-header .brand span {
+      font: 600 27px var(--serif);
+      letter-spacing: .005em;
+    }
+
+    .cm-careers-header .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+    }
+
+    .cm-careers-header .navlinks a {
+      color: #5b4c4b;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: color .2s ease;
+    }
+
+    .cm-careers-header .navlinks a:hover {
+      color: var(--orange);
+    }
+
+    .cm-careers-header .menu {
+      display: none;
+      padding: 10px 13px;
+      color: var(--wine);
+      background: transparent;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    /* Temporary page introduction.
+       This will be replaced by the designed hero in Build 2. */
+
+    .page-intro {
+      min-height: 360px;
+      display: flex;
+      align-items: center;
+      padding: 76px 0;
+      background: linear-gradient(115deg, var(--cream), var(--pale));
+      border-bottom: 1px solid var(--line);
+    }
+
+    .page-intro h1 {
+      max-width: 850px;
+      margin: 15px 0 12px;
+      color: var(--wine);
+      font: 600 clamp(46px, 6vw, 76px)/.98 var(--serif);
+      letter-spacing: -.025em;
+    }
+
+    .page-intro .lead {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      padding: 42px 0 22px;
+      color: #f8eee5;
+      background: var(--wine);
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 35px;
+      padding-bottom: 30px;
+    }
+
+    .footer-brand {
+      max-width: 420px;
+    }
+
+    .footer-brand-name {
+      margin: 0 0 8px;
+      color: #fffaf4;
+      font: 600 30px var(--serif);
+    }
+
+    .footer-brand p {
+      max-width: 360px;
+      margin: 0;
+      color: #e1cfc8;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      padding-top: 10px;
+    }
+
+    .footer-links a {
+      color: #f8eee5;
+      font-size: 11px;
+      font-weight: 700;
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #f3a16f;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.2);
+      color: #d7c1b9;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    /* Keyboard accessibility */
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 760px) {
+      .cm-careers-header .nav {
+        width: 92vw;
+      }
+
+      .cm-careers-header .brand img {
+        width: 39px;
+        height: 39px;
+      }
+
+      .cm-careers-header .brand span {
+        font-size: 23px;
+      }
+
+      .cm-careers-header .menu {
+        display: block;
+      }
+
+      .cm-careers-header .navlinks {
+        display: none;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        padding: 18px 5vw 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 14px 24px rgba(74, 30, 43, .08);
+      }
+
+      .cm-careers-header .navlinks.open {
+        display: flex;
+      }
+
+      .page-intro {
+        min-height: 330px;
+        padding: 60px 0;
+      }
+
+      .page-intro .lead {
+        font-size: 14px;
+      }
+
+      .footer-main {
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .footer-links {
+        gap: 14px 20px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Existing Corceptive Media header.
+       Navigation is intentionally unchanged for now. -->
+  <header class="cm-careers-header">
+    <div class="nav">
+      <a class="brand" href="/" aria-label="Corceptive Media home">
+        <img src="/Corceptive_Media_Logo.png" alt="">
+        <span>Corceptive Media</span>
+      </a>
+
+      <button class="menu" type="button"
+        aria-expanded="false" aria-controls="navlinks">
+        Menu
+      </button>
+
+      <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/careers/">Careers</a>
+        <a href="/#services">Services</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BUILD 2: Replace this introduction with the full hero section. -->
+    <section class="page-intro">
+      <div class="wrap">
+        <p class="eyebrow">Corceptive Media / Performance Marketing</p>
+        <h1>Performance Marketing</h1>
+        <p class="lead">
+          Strategy, creative and paid advertising built around your
+          business goals.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <h2 class="footer-brand-name">Corceptive Media</h2>
+          <p>
+            Marketing strategy, creative and paid media
+            built around your business goals.
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/#services">Services</a>
+          <a href="/careers/">Careers</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> Corceptive Media. All rights reserved.</span>
+        <span>Strategy. Creative. Performance.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const header = document.querySelector('.cm-careers-header');
+      const menu = header && header.querySelector('.menu');
+      const nav = header && header.querySelector('.navlinks');
+
+      if (menu && nav) {
+        menu.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('open');
+          menu.setAttribute('aria-expanded', String(isOpen));
+          menu.textContent = isOpen ? 'Close' : 'Menu';
+        });
+
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('open');
+            menu.setAttribute('aria-expanded', 'false');
+            menu.textContent = 'Menu';
+          });
+        });
+      }
+
+      document.getElementById('currentYear').textContent =
+        new Date().getFullYear();
+    })();
+  </script>
+
+</body>
+</html>
