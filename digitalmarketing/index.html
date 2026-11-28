@@ -33,6 +33,15 @@ h1{font:400 clamp(29px,3.5vw,76px)/1.16 var(--serif);letter-spacing:-.045em;marg
 @media(max-width:767px){.header{top:8px;height:66px}.nav{padding:0 14px}.brand{font-size:18px}.menu{display:block}.navlinks{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;padding:22px;background:#fffaf4;border-radius:12px;box-shadow:0 12px 30px #4a1e2b22;flex-direction:column;align-items:flex-start;gap:24px}.navlinks.open{display:flex}.hero{padding-top:92px;background:linear-gradient(135deg,#fff4e7,#efd4bf)}.hero-stage{display:flex;flex-direction:column;align-items:stretch;aspect-ratio:auto}.hero-copy{margin:0;padding:26px 6vw 22px}.hero-art{position:relative;inset:auto;z-index:0;width:100%;height:auto;aspect-ratio:925/831;object-fit:cover;object-position:right center;order:2}.eyebrow{margin-bottom:18px}h1{font-size:clamp(32px,7.5vw,49px);margin-bottom:18px}.hero-description{font-size:15px;margin-bottom:22px}.footer-bottom{flex-direction:column;gap:5px}}
 @media(min-width:621px) and (max-width:767px){.header{height:76px;top:14px}.nav{padding:0 28px}}
 @media(prefers-reduced-motion:reduce){.cta,.brand img,.navlinks a,.navlinks a:after{transition:none}.cta:hover,.brand:hover img{transform:none}}
+
+/* Extend the artwork continuously behind the floating navigation.
+   Mirror only the uppermost background pixels, not the ecosystem artwork. */
+@media(min-width:768px){
+ .hero{position:relative;--dm-header-space:110px;padding-top:var(--dm-header-space)}
+ .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:var(--dm-header-space);background-image:url('/digitalmarketing/hero.webp');background-repeat:no-repeat;background-position:center top;background-size:100% 400vw;transform:scaleY(-1);pointer-events:none}
+}
+@media(min-width:768px) and (max-width:1050px){.hero{--dm-header-space:96px}}
+
 </style>
 </head>
 <body>
