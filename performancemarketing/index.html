@@ -60,6 +60,29 @@
 @media(prefers-reduced-motion:reduce){.philosophy-featured::after{animation:none}}
 @media(max-width:760px){.hero::before{height:100px}.philosophy-featured{margin-bottom:12px}}
 
+
+/* Fluid editorial layout — isolated, reversible viewport sizing pass. */
+.wrap{width:90%;max-width:none;margin-inline:auto}
+.hero-copy{max-width:min(600px,48vw)}
+.philosophy{grid-template-columns:minmax(0,1.48fr) minmax(0,1fr);gap:clamp(24px,4vw,90px);padding-block:clamp(35px,3.4vw,80px)}
+.philosophy p:not(.eyebrow){max-width:52ch}
+.grid{gap:clamp(16px,1.4vw,34px) clamp(24px,2vw,48px)}
+.cap{grid-template-columns:minmax(0,61fr) minmax(0,39fr);min-height:clamp(170px,13vw,330px)}
+.cap .shine{min-width:0;min-height:0}
+.cap img{width:100%;height:100%;aspect-ratio:275/155}
+.cap-copy{min-width:0;padding:clamp(15px,1.5vw,32px);overflow-wrap:break-word}
+.cap-copy p{font-size:clamp(13px,.9vw,17px)}
+.capabilities{padding-bottom:clamp(38px,3.4vw,72px)}
+.numbers{padding-bottom:clamp(50px,4vw,90px)}
+@media(max-width:760px){
+ .hero-copy{max-width:100%}
+ .philosophy{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:28px}
+ .grid{grid-template-columns:minmax(0,1fr);gap:12px}
+ .cap{grid-template-columns:minmax(0,52fr) minmax(0,48fr);min-height:135px}
+ .cap-copy{padding:12px}
+ .cap-copy p{font-size:12px}
+}
+
 </style>
 </head>
 <body>
