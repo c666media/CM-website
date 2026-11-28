@@ -1228,7 +1228,7 @@ body:has(.cm-about) {
   position:absolute;
   z-index:0;
   inset:0;
-  background-image:url('/about-hero-2026.webp');
+  background-image:url('/about-hero-hq.webp');
   background-repeat:no-repeat;
   background-size:cover;
   background-position:center center;
