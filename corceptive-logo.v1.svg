@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="title">
+  <title id="title">Corceptive Media</title>
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe38b"/>
+      <stop offset="1" stop-color="#ffb62c"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffad20"/>
+      <stop offset="1" stop-color="#f36a19"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ef572b"/>
+      <stop offset="1" stop-color="#b92d13"/>
+    </linearGradient>
+    <clipPath id="mark">
+      <path fill-rule="evenodd" d="M600 24 1180 1110 870 1022 600 565 330 1022 20 1110Z M600 565 870 1022 330 1022Z"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#mark)">
+    <rect width="1200" height="1200" fill="url(#orange)"/>
+    <path d="M600 24 600 565 330 565Z" fill="url(#gold)"/>
+    <path d="M600 24 870 565 600 565Z" fill="#ff9d08"/>
+    <path d="M330 565 20 1110 330 1022Z" fill="#f58a24"/>
+    <path d="M330 565 600 565 460 810 330 1022Z" fill="url(#red)"/>
+    <path d="M600 565 870 565 870 1022 740 810Z" fill="#e94e25"/>
+    <path d="M870 565 1180 1110 870 1022Z" fill="url(#orange)"/>
+    <path d="M330 565H870L840 620H360Z" fill="#f47720" opacity=".55"/>
+  </g>
+</svg>
