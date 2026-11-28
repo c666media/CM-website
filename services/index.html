@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Our Services | Corceptive Media</title>
+
+  <meta name="description" content="Explore Corceptive Media's brand strategy, digital marketing and performance marketing services. Integrated marketing solutions built for meaningful business growth.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://corceptivemedia.com/services/">
+
+  <meta property="og:title" content="Our Services | Corceptive Media">
+  <meta property="og:description" content="Brand strategy, digital marketing and performance. An integrated approach to meaningful business growth.">
+  <meta property="og:url" content="https://corceptivemedia.com/services/">
+  <meta property="og:type" content="website">
+
+  <meta name="theme-color" content="#fffaf4">
+
+  <link rel="icon" href="/cmfavicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/corceptive-homepage-abstract.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', Arial, sans-serif;
+      background: #fffaf4;
+      color: #2c2224;
+    }
+
+    /* HEADER */
+
+    .service-header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .service-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #4a1e2b;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .service-brand img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .service-brand span {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .service-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .service-nav a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #554747;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      transition: color .2s ease;
+    }
+
+    .service-nav a:hover {
+      color: #e9632b;
+    }
+
+    .service-menu {
+      display: none;
+      padding: 9px 13px;
+      border: 1px solid #e5d8cb;
+      background: transparent;
+      color: #4a1e2b;
+      font-size: 10px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    /* SERVICE CARDS */
+
+    .service-card-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .service-card-link:focus-visible {
+      outline: 2px solid #e9632b;
+      outline-offset: 5px;
+    }
+
+    .service-card-label {
+      display: block;
+      margin-top: 17px;
+      padding-right: 20px;
+      color: #a66c2c;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .service-explore {
+      position: absolute;
+      left: 27px;
+      bottom: 20px;
+      color: #e9632b;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .cm-card-content {
+      padding-bottom: 65px;
+    }
+
+    /* BOTTOM CALL TO ACTION */
+
+    .services-cta {
+      padding: 85px 7vw;
+      background: linear-gradient(
+        115deg,
+        #4a1e2b,
+        #632a38
+      );
+      color: #fffaf4;
+    }
+
+    .services-cta-inner {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .services-cta h2 {
+      margin: 12px 0;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .services-cta p {
+      max-width: 560px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #e8d7d1;
+    }
+
+    .services-cta .cta-button {
+      display: inline-block;
+      padding: 16px 25px;
+      border: 1px solid #c9a84c;
+      color: #fffaf4;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: .25s ease;
+    }
+
+    .services-cta .cta-button:hover {
+      background: #c9a84c;
+      color: #4a1e2b;
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    .service-footer {
+      padding: 35px 6vw 22px;
+      background: #fffaf4;
+      border-top: 1px solid #eadbca;
+    }
+
+    .service-footer-inner {
+      max-width: 1240px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .service-footer a {
+      color: #6b5752;
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    .service-footer a:hover {
+      color: #e9632b;
+    }
+
+    .service-footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .service-footer-bottom {
+      max-width: 1240px;
+      margin: 25px auto 0;
+      padding-top: 17px;
+      border-top: 1px solid #eadbca;
+      color: #897a74;
+      font-size: 10px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
+
+      .service-brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .service-brand span {
+        font-size: 23px;
+      }
+
+      .service-menu {
+        display: block;
+      }
+
+      .service-nav {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        padding: 23px;
+        background: #fffaf4;
+        border-radius: 12px;
+        box-shadow: 0 12px 30px rgba(45,20,29,.12);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+      }
+
+      .service-nav.open {
+        display: flex;
+      }
+
+      .cm-service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cm-card-image {
+        height: 230px;
+      }
+
+      .services-cta-inner {
+        display: block;
+      }
+
+      .services-cta .cta-button {
+        margin-top: 20px;
+      }
+
+      .service-footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cm-homepage">
+
+    <!-- HEADER -->
+
+    <header>
+      <div class="service-header-inner">
+
+        <a href="/" class="service-brand">
+          <img src="/Corceptive_Media_Logo.png"
+               alt="Corceptive Media logo">
+          <span>Corceptive Media</span>
+        </a>
+
+        <button class="service-menu"
+                type="button"
+                aria-expanded="false"
+                aria-controls="service-navigation">
+          MENU
+        </button>
+
+        <nav class="service-nav"
+             id="service-navigation"
+             aria-label="Main navigation">
+
+          <a href="/">Home</a>
+          <a href="/services/">Services</a>
+          <a href="/about/">About</a>
+          <a href="/careers/">Careers</a>
+          <a href="/contact/">Contact</a>
+
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="cm-hero">
+
+        <div class="cm-hero-art" aria-hidden="true"></div>
+
+        <div class="cm-hero-inner">
+
+          <div class="cm-eyebrow">
+            WHAT WE DO
+          </div>
+
+          <h1 class="cm-hero-title">
+            Ideas into
+            <br>
+            <span>meaningful growth.</span>
+          </h1>
+
+          <p class="cm-hero-copy">
+            An integrated approach to brand, marketing and
+            performance. We bring strategy, creativity and
+            execution together to create lasting business impact.
+          </p>
+
+          <div class="cm-hero-pillars">
+            <span>Strategy</span>
+            <span>Creative</span>
+            <span>Performance</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+
+      <section class="cm-capabilities">
+
+        <div class="cm-section-heading">
+
+          <div>
+            <div class="cm-eyebrow">
+              OUR CAPABILITIES
+            </div>
+
+            <h2>
+              What We Do
+            </h2>
+          </div>
+
+          <p>
+            Distinctive thinking and connected marketing
+            solutions designed around your business goals.
+          </p>
+
+        </div>
+
+        <div class="cm-service-grid">
+
+          <!-- BRAND STRATEGY -->
+
+          <article class="cm-service-card">
+
+            <div class="cm-card-shell">
+
+              <a href="/contact/" class="service-card-link">
+
+                <div class="cm-card-image">
+                  <img
+                    src="/brandstrategy-wide.webp"
+                    alt="Brand strategy and positioning"
+                    loading="lazy">
+                </div>
+
+                <div class="cm-card-content">
+
+                  <span class="cm-card-kicker">
+                    01 / POSITIONING
+                  </span>
+
+                  <h3>
+                    Brand Strategy
+                  </h3>
+
+                  <p>
+                    Define a distinctive position, shape
+                    a clear brand voice, and build recognition
+                    and trust at every customer touchpoint.
+                  </p>
+
+                  <span class="service-card-label">
+                    Discuss this service
+                  </span>
+
+                  <span class="cm-card-arrow">→</span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- DIGITAL MARKETING -->
+
+          <article class="cm-service-card">
+
+            <div class="cm-card-shell">
+
+              <a href="/contact/" class="service-card-link">
+
+                <div class="cm-card-image">
+                  <img
+                    src="/digitalmarketing-wide.webp"
+                    alt="Digital marketing services"
+                    loading="lazy">
+                </div>
+
+                <div class="cm-card-content">
+
+                  <span class="cm-card-kicker">
+                    02 / DIGITAL ECOSYSTEMS
+                  </span>
+
+                  <h3>
+                    Digital Marketing
+                  </h3>
+
+                  <p>
+                    Connect your brand with the right
+                    audiences through digital campaigns,
+                    media buying and customer experiences
+                    designed to drive sustainable growth.
+                  </p>
+
+                  <span class="service-card-label">
+                    Discuss this service
+                  </span>
+
+                  <span class="cm-card-arrow">→</span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </article>
+
+          <!-- PERFORMANCE MARKETING -->
+
+          <article class="cm-service-card">
+
+            <div class="cm-card-shell">
+
+              <a href="/performancemarketing/" class="service-card-link">
+
+                <div class="cm-card-image">
+                  <img
+                    src="/performancemarketing-wide.webp"
+                    alt="Performance marketing campaigns"
+                    loading="lazy">
+                </div>
+
+                <div class="cm-card-content">
+
+                  <span class="cm-card-kicker">
+                    03 / MEASURABLE GROWTH
+                  </span>
+
+                  <h3>
+                    Performance Marketing
+                  </h3>
+
+                  <p>
+                    Turn attention into qualified leads
+                    through focused campaigns, continuous
+                    optimisation and measurable returns
+                    on your marketing investment.
+                  </p>
+
+                  <span class="service-card-label">
+                    Explore performance marketing
+                  </span>
+
+                  <span class="cm-card-arrow">→</span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+      </section>
+
+      <!-- APPROACH -->
+
+      <section class="cm-approach">
+
+        <div class="cm-approach-title">
+          <h2>
+            Strategy.
+            <br>
+            Execution.
+            <br>
+            <span>Growth.</span>
+          </h2>
+        </div>
+
+        <div class="cm-approach-body">
+
+          <p>
+            A marketing partner for brands that value clarity,
+            creativity and compounding results. We connect
+            every part of the marketing journey with a clear
+            purpose and measurable direction.
+          </p>
+
+          <div class="cm-approach-points">
+
+            <div>
+              <div class="cm-point-icon">◎</div>
+              <div class="cm-point-copy">
+                <strong>Brand Clarity</strong>
+                <small>A sharper, more distinctive brand presence.</small>
+              </div>
+            </div>
+
+            <div>
+              <div class="cm-point-icon">◇</div>
+              <div class="cm-point-copy">
+                <strong>Integrated Marketing</strong>
+                <small>Connected journeys across every channel.</small>
+              </div>
+            </div>
+
+            <div>
+              <div class="cm-point-icon">↗</div>
+              <div class="cm-point-copy">
+                <strong>Measurable Impact</strong>
+                <small>Outcomes that move the business forward.</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CONTACT CTA -->
+
+      <section class="services-cta">
+
+        <div class="services-cta-inner">
+
+          <div>
+            <div class="cm-eyebrow">
+              LET'S WORK TOGETHER
+            </div>
+
+            <h2>
+              Have a goal in mind?
+            </h2>
+
+            <p>
+              Let's explore how the right strategy and
+              marketing approach can move your business forward.
+            </p>
+          </div>
+
+          <a href="/contact/" class="cta-button">
+            Get in touch →
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="service-footer">
+
+      <div class="service-footer-inner">
+
+        <a href="/">
+          Corceptive Media
+        </a>
+
+        <nav class="service-footer-links"
+             aria-label="Footer navigation">
+
+          <a href="/">Home</a>
+          <a href="/services/">Services</a>
+          <a href="/about/">About</a>
+          <a href="/careers/">Careers</a>
+          <a href="/contact/">Contact</a>
+
+        </nav>
+
+      </div>
+
+      <div class="service-footer-bottom">
+        © <span id="current-year"></span> Corceptive Media.
+        All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('current-year').textContent =
+      new Date().getFullYear();
+
+    const menuButton =
+      document.querySelector('.service-menu');
+
+    const navigation =
+      document.querySelector('.service-nav');
+
+    menuButton.addEventListener('click', function () {
+
+      const isOpen =
+        navigation.classList.toggle('open');
+
+      menuButton.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+      );
+
+      menuButton.textContent =
+        isOpen ? 'CLOSE' : 'MENU';
+
+    });
+
+    navigation.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        navigation.classList.remove('open');
+
+        menuButton.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        menuButton.textContent = 'MENU';
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
