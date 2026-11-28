@@ -1,0 +1,20 @@
+/* Shared Services disclosure; no changes to other navigation items. */
+header .cm-services-menu{position:relative;flex-shrink:0;color:#554747;margin:0;padding:0}
+header .cm-services-menu>summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap;padding:4px 0;color:#554747;font-family:Inter,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;line-height:1.5}
+header .cm-services-menu>summary::-webkit-details-marker{display:none}
+header .cm-services-menu>summary::marker{content:""}
+header .cm-services-menu>summary::after{content:"";display:block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+header .cm-services-menu[open]>summary::after{transform:rotate(225deg) translateY(-1px)}
+header .cm-services-menu>summary:hover,header .cm-services-menu[open]>summary{color:#d85d27}
+header .cm-services-menu>summary:focus-visible,header .cm-services-dropdown>a:focus-visible{outline:2px solid #e9632b;outline-offset:3px;border-radius:5px}
+header .cm-services-menu>.cm-services-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:230px;padding:8px;margin:0;border:1px solid #e8c6a8;border-radius:13px;background:rgba(255,248,239,.97);box-shadow:0 12px 32px rgba(78,39,23,.15),inset 0 1px 1px #fff;z-index:1100;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+header .cm-services-menu:not([open])>.cm-services-dropdown{display:none!important}
+header .cm-services-menu[open]>.cm-services-dropdown{display:grid;gap:3px}
+header .cm-services-menu>.cm-services-dropdown>a{display:block!important;position:relative!important;color:#554747!important;font:600 13px/1.5 Inter,Arial,sans-serif!important;letter-spacing:0!important;text-transform:none!important;text-decoration:none!important;white-space:nowrap;padding:11px 13px!important;margin:0!important;border-radius:7px;transition:background .2s,color .2s}
+header .cm-services-menu>.cm-services-dropdown>a::after{display:none!important}
+header .cm-services-menu>.cm-services-dropdown>a:hover,header .cm-services-menu>.cm-services-dropdown>a[aria-current="page"]{color:#a84819!important;background:#f4dac5!important}
+@media(min-width:901px){header .cm-services-menu>summary{font-size:12px;letter-spacing:.16em}}
+header .cm-services-menu.cm-services-mobile>summary{font-family:inherit;font-size:inherit;letter-spacing:inherit;text-transform:none;justify-content:center}
+header .cm-services-menu.cm-services-mobile>.cm-services-dropdown,header .mobile-nav .cm-services-menu>.cm-services-dropdown{position:static;transform:none;min-width:0;box-shadow:none;margin-top:8px;text-align:center}
+@media(max-width:767px){header .navlinks .cm-services-menu>.cm-services-dropdown,header .about-nav-links .cm-services-menu>.cm-services-dropdown,header .service-nav .cm-services-menu>.cm-services-dropdown{position:static;transform:none;margin-top:8px;min-width:0;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){header .cm-services-menu>summary::after,header .cm-services-dropdown>a{transition:none}}

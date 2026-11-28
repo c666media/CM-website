@@ -104,9 +104,11 @@ h1{font:400 clamp(29px,3.5vw,76px)/1.16 var(--serif);letter-spacing:-.045em;marg
 @media(max-width:767px){.hero{background:linear-gradient(135deg,#fff4e7,#efd4bf)}.hero-stage{background:linear-gradient(to bottom,transparent 35%,#efd4bf 100%)}.hero-art{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 83%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 83%,transparent 100%)}.dm-capabilities{padding-top:28px}}
 
 </style>
+<link rel="stylesheet" href="/assets/services-dropdown.css?v=1">
+<script defer src="/assets/services-dropdown.js?v=1"></script>
 </head>
 <body>
-<header class="header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" width="43" height="43" alt="">Corceptive Media</a><button class="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/about">About</a><a href="/careers/">Careers</a><a href="/contact">Contact</a></nav></div></header>
+<header class="header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" width="43" height="43" alt="">Corceptive Media</a><button class="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><details class="cm-services-menu"><summary>Services</summary><div class="cm-services-dropdown"><a href="/digitalmarketing/" aria-current="page">Digital Marketing</a><a href="/performancemarketing/">Performance Marketing</a></div></details><a href="/about">About</a><a href="/careers/">Careers</a><a href="/contact">Contact</a></nav></div></header>
 <main>
 <section class="hero" aria-labelledby="hero-title">
 <div class="hero-stage">
