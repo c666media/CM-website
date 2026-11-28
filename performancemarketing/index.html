@@ -10,7 +10,7 @@
 <link rel="icon" href="/cmfavicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="/performancemarketing/hero.webp" fetchpriority="high">
 <style>
 :root{--cream:#fffaf4;--wine:#4a1e2b;--orange:#ad420b;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',Arial,sans-serif;--line:#e5d8cb}
@@ -23,10 +23,34 @@
 .closing{min-height:300px;position:relative;isolation:isolate;display:flex;align-items:center;background:#d4b5a0;overflow:hidden}.closing img{position:absolute;inset:0;width:68%;height:100%;z-index:-2;object-position:left center}.closing:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,transparent 45%,#d4b5a0 69%)}.closing-copy{margin-left:65%;padding:35px 0}.closing h2{font-size:clamp(32px,3.4vw,50px);margin-bottom:20px}
 .site-footer{background:#fffaf4;color:#4a1e2b;padding:14px 0;border-top:1px solid #e5d8cb}.footer-bottom{display:flex;justify-content:space-between;gap:15px;color:#766b68;font-size:11px;line-height:1.6}
 @media(max-width:760px){.header{top:8px;height:66px}.nav{padding:0 14px}.brand{font-size:23px}.brand img{width:39px;height:39px}.menu{display:block}.navlinks{display:none;position:absolute;top:74px;left:0;right:0;padding:22px;background:#fffaf4;border-radius:12px;box-shadow:0 12px 30px #4a1e2b22;flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.hero{min-height:580px;align-items:flex-start;padding:110px 0 230px}.hero-art{width:100%;height:58%;top:auto;bottom:0}.hero:after{background:linear-gradient(180deg,#f1e4d6 0%,#f1e4d6 41%,transparent 72%)}.hero-copy{max-width:100%}.hero-copy p:not(.eyebrow){margin:15px 0}.philosophy{grid-template-columns:1fr;gap:24px;padding:28px 0}.grid{grid-template-columns:1fr;gap:12px}.cap{min-height:135px;grid-template-columns:52% 48%}.cap-copy{padding:12px}.cap-copy p{font-size:12px}.stats{grid-template-columns:repeat(2,1fr);row-gap:16px}.stat:nth-child(2){border:0}.closing{min-height:400px;align-items:flex-end}.closing img{width:100%;height:100%}.closing:after{background:linear-gradient(180deg,transparent 10%,rgba(28,19,13,.88) 95%)}.closing-copy{margin:0;color:white;padding:45px 0}.closing-copy em{color:#ffb474}.footer-bottom{flex-direction:column;gap:5px}}
+
+/* Homepage header typography and interaction, scoped to this page. */
+.header{--cm-orange:#e9632b}
+.brand{font:400 20px/1.4 'Libre Baskerville',Georgia,serif;letter-spacing:-.025em;gap:12px;color:#4a1e2b}
+.brand img{width:48px;height:48px;transition:transform .5s}
+.brand:hover img{transform:scale(1.05)}
+.navlinks{gap:40px}
+.navlinks a{font-family:Inter,Arial,sans-serif;font-size:10px;font-weight:800;letter-spacing:.14em;position:relative;padding-block:4px;transition:color .3s}
+.navlinks a:after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:currentColor;transition:width .3s}
+.navlinks a:hover{color:#e9632b}
+.navlinks a:hover:after,.navlinks a:focus-visible:after{width:100%}
+@media(min-width:901px){.header{width:min(1760px,94vw);height:82px;top:18px}.nav{padding:0 38px}.navlinks a{font-size:12px;letter-spacing:.16em}}
+@media(min-width:768px) and (max-width:900px){.navlinks{gap:clamp(12px,3vw,40px)}.nav{padding:0 28px}}
+@media(max-width:767px){.menu{display:block}.navlinks{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;padding:22px;background:#fffaf4;border-radius:12px;box-shadow:0 12px 30px #4a1e2b22;flex-direction:column;align-items:flex-start;gap:24px}.navlinks.open{display:flex}.brand{font-size:18px}.brand img{width:48px;height:48px}}
+@media(min-width:621px) and (max-width:760px){.header{height:76px;top:14px}.nav{padding:0 28px}}
+/* Same lift, amber shadow and image zoom as the homepage capability cards. */
+.cap{position:relative;border:1px solid #eadbca;transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s ease,border-color .4s ease}
+.cap .shine img{filter:saturate(.9) contrast(.96);transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .5s ease}
+.cap .arrow{align-self:flex-start;display:inline-block;transition:transform .3s ease;color:#e56b2f}
+.cap:after{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(125deg,transparent 12%,rgba(233,99,43,0) 38%,rgba(201,168,76,.95) 70%,transparent 95%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .35s;pointer-events:none}
+@media(hover:hover){.cap:hover{transform:translateY(-7px);border-color:#e9a653;box-shadow:0 0 0 3px rgba(207,165,91,.13),0 18px 38px rgba(103,65,40,.14),0 5px 16px rgba(229,107,47,.08)}.cap:hover .shine img{transform:scale(1.055);filter:saturate(1.05) contrast(1)}.cap:hover:after{opacity:1}.cap:hover .arrow{transform:translateX(4px)}}
+.cap:focus-within{border-color:#e9a653;box-shadow:0 0 0 3px rgba(207,165,91,.13)}
+@media(prefers-reduced-motion:reduce){.cap,.cap .shine img,.cap .arrow,.cap:after,.brand img,.navlinks a,.navlinks a:after{transition:none!important}.cap:hover,.cap:hover .shine img,.cap:hover .arrow,.brand:hover img{transform:none!important}}
+
 </style>
 </head>
 <body>
-<header class="header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" width="43" height="43" alt="">Corceptive Media</a><button class="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/about">About</a><a href="/careers/">Careers</a><a href="/#services">Services</a><a href="/contact">Contact</a></nav></div></header>
+<header class="header"><div class="nav"><a class="brand" href="/" aria-label="Corceptive Media home"><img src="/Corceptive_Media_Logo.png" width="43" height="43" alt="">Corceptive Media</a><button class="menu" type="button" aria-label="Toggle navigation" aria-controls="navlinks" aria-expanded="false">☰</button><nav class="navlinks" id="navlinks" aria-label="Main navigation"><a href="/">Home</a><a href="/#services">Services</a><a href="/about">About</a><a href="/careers/">Careers</a><a href="/contact">Contact</a></nav></div></header>
 <main>
 <section class="hero"><img class="hero-art" src="/performancemarketing/hero.webp" width="572" height="375" fetchpriority="high" alt="Contemporary luxury mansion with a black sports car"><div class="wrap"><div class="hero-copy"><p class="eyebrow">What we do — Performance Marketing</p><h1>Performance<br>Marketing.<br><em>Precisely Engineered.</em></h1><p>Connecting exceptional properties with the people who can own them.</p><a class="cta" href="/contact">Discuss Your Campaign <span aria-hidden="true">→</span></a></div></div></section>
 <section class="wrap philosophy"><div class="shine"><img src="/performancemarketing/interior.webp" width="516" height="280" loading="lazy" alt="Double-height luxury living room and sculptural staircase"></div><div><p class="eyebrow">The philosophy</p><h2>Luxury deserves a different marketing approach.</h2><p>Finding the right buyer requires more than generating leads. It requires precision in targeting, positioning and communication.</p><div class="rule"></div></div></section>
