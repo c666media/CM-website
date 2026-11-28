@@ -1012,6 +1012,14 @@ body{background:#443125}
 @media(max-width:400px){.contact-form .form-row{grid-template-columns:1fr}.contact-form{padding:18px}}
 @media(prefers-reduced-motion:reduce){.contact-form,.contact-form input,.contact-form textarea,.contact-form .submit-button{transition:none}.contact-form .submit-button:hover{transform:none}}
 
+
+/* Soft black ambient shadow behind the introductory copy, without a visible box. */
+.contact-content{position:relative;isolation:isolate}
+.contact-content::before{content:"";position:absolute;z-index:-1;pointer-events:none;inset:-55px -65px -50px -65px;background:radial-gradient(ellipse at 38% 48%,rgba(0,0,0,.65) 0%,rgba(0,0,0,.43) 42%,rgba(0,0,0,.16) 66%,transparent 82%);filter:blur(24px)}
+.contact-content h1{text-shadow:0 3px 20px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.5)}
+.contact-content .contact-intro,.contact-content .response-time,.contact-details{text-shadow:0 2px 8px rgba(0,0,0,.8)}
+@media(max-width:760px){.contact-content::before{inset:-28px -20px;background:radial-gradient(ellipse at 40% 48%,rgba(0,0,0,.64),rgba(0,0,0,.32) 55%,transparent 85%);filter:blur(18px)}}
+
 </style>
 </head>
 
