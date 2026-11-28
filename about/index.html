@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About Corceptive Media | Our Approach</title>
+
+  <meta name="description" content="Learn about Corceptive Media, our belief in thoughtful partnerships, purposeful creativity and meaningful business growth.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://corceptivemedia.com/about/">
+
+  <meta property="og:title" content="About Corceptive Media">
+  <meta property="og:description" content="Thoughtful partnerships, purposeful creativity and growth that means something.">
+  <meta property="og:url" content="https://corceptivemedia.com/about/">
+  <meta property="og:type" content="website">
+
+  <meta name="theme-color" content="#fff5ec">
+
+  <link rel="icon" href="/cmfavicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/corceptive-homepage-abstract.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Manrope', Arial, sans-serif;
+    }
+
+    header {
+      z-index: 1000;
+    }
+
+    .about-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 20px;
+    }
+
+    .about-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #4a1e2b;
+      flex-shrink: 0;
+    }
+
+    .about-brand img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
+    }
+
+    .about-brand span {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .about-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .about-nav-links a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #554747;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      transition: color .2s ease;
+    }
+
+    .about-nav-links a:hover {
+      color: #e9632b;
+    }
+
+    .about-menu-button {
+      display: none;
+      padding: 9px 13px;
+      background: transparent;
+      border: 1px solid #e5d8cb;
+      color: #4a1e2b;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      cursor: pointer;
+    }
+
+    @media(max-width: 700px) {
+      .about-brand img {
+        width: 38px;
+        height: 38px;
+      }
+
+      .about-brand span {
+        font-size: 23px;
+      }
+
+      .about-menu-button {
+        display: block;
+      }
+
+      .about-nav-links {
+        display: none;
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        padding: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        border-radius: 12px;
+        background: #fffaf4;
+        box-shadow: 0 12px 30px rgba(45,20,29,.12);
+      }
+
+      .about-nav-links.open {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="about-nav-inner">
+
+      <a href="/" class="about-brand">
+        <img src="/Corceptive_Media_Logo.png"
+             alt="Corceptive Media logo">
+        <span>Corceptive Media</span>
+      </a>
+
+      <button class="about-menu-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="about-navigation">
+        MENU
+      </button>
+
+      <nav class="about-nav-links"
+           id="about-navigation"
+           aria-label="Main navigation">
+
+        <a href="/">Home</a>
+        <a href="/#services">Services</a>
+        <a href="/about/">About</a>
+        <a href="/careers/">Careers</a>
+        <a href="/contact">Contact</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="cm-about cm-about-screen">
+
+      <section class="cm-about-screen-hero">
+
+        <div class="cm-about-screen-photo"
+             aria-hidden="true">
+        </div>
+
+        <div class="cm-about-screen-content">
+
+          <div class="cm-about-screen-kicker">
+            A LITTLE ABOUT US
+          </div>
+
+          <h1 class="cm-about-screen-title">
+            Good work starts
+            <br>
+            with <span>clear thinking.</span>
+          </h1>
+
+          <p class="cm-about-screen-statement">
+            I believe in thoughtful partnerships,
+            purposeful creativity and growth
+            that means something.
+          </p>
+
+          <div class="cm-about-screen-signature">
+            <span class="cm-about-screen-signature-rule"></span>
+            <span>Sophie</span>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <script>
+    const menuButton =
+      document.querySelector('.about-menu-button');
+
+    const navigation =
+      document.querySelector('.about-nav-links');
+
+    menuButton.addEventListener('click', function () {
+      const isOpen =
+        navigation.classList.toggle('open');
+
+      menuButton.setAttribute(
+        'aria-expanded',
+        String(isOpen)
+      );
+
+      menuButton.textContent =
+        isOpen ? 'CLOSE' : 'MENU';
+    });
+
+    navigation.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = 'MENU';
+      });
+    });
+  </script>
+
+</body>
+</html>
