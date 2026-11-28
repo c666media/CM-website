@@ -127,11 +127,11 @@ R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{onc
 R.jsx("div",{className:"cm-card-image",children:R.jsx("img",{src:Ye[2].image,alt:Ye[2].title})}),
 R.jsxs("div",{className:"cm-card-content",children:[R.jsx("span",{className:"cm-card-kicker",children:"01 / POSITIONING"}),R.jsx("h3",{children:"Brand Strategy"}),R.jsx("p",{children:"Define a distinctive position, shape a clear brand voice, and build recognition and trust at every customer touchpoint."}),R.jsx("span",{className:"cm-card-arrow",children:"→"})]})
 ]})}),
-R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.7,delay:.14},className:"cm-service-card",children:R.jsxs("div",{className:"cm-card-shell",children:[
+R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.7,delay:.14},className:"cm-service-card",children:R.jsxs("a",{className:"cm-card-shell",href:"/digitalmarketing/","aria-label":"Explore Digital Marketing",style:{color:"inherit",textDecoration:"none",cursor:"pointer"},children:[
 R.jsx("div",{className:"cm-card-image",children:R.jsx("img",{src:Ye[1].image,alt:Ye[1].title})}),
 R.jsxs("div",{className:"cm-card-content",children:[R.jsx("span",{className:"cm-card-kicker",children:"02 / DIGITAL ECOSYSTEMS"}),R.jsx("h3",{children:"Digital Marketing"}),R.jsx("p",{children:"Connect your brand with the right audiences through digital campaigns, media buying, and customer experiences designed to build visibility and drive sustainable growth."}),R.jsx("span",{className:"cm-card-arrow",children:"→"})]})
 ]})}),
-R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.7,delay:.28},className:"cm-service-card",children:R.jsxs("div",{className:"cm-card-shell",children:[
+R.jsx(qe.div,{initial:{opacity:0,y:28},whileInView:{opacity:1,y:0},viewport:{once:!0},transition:{duration:.7,delay:.28},className:"cm-service-card",children:R.jsxs("a",{className:"cm-card-shell",href:"/performancemarketing/","aria-label":"Explore Performance Marketing",style:{color:"inherit",textDecoration:"none",cursor:"pointer"},children:[
 R.jsx("div",{className:"cm-card-image",children:R.jsx("img",{src:Ye[0].image,alt:Ye[0].title})}),
 R.jsxs("div",{className:"cm-card-content",children:[R.jsx("span",{className:"cm-card-kicker",children:"03 / MEASURABLE GROWTH"}),R.jsx("h3",{children:"Performance Marketing"}),R.jsx("p",{children:"Turn attention into qualified leads through focused campaigns, continuous optimisation, and measurable returns on your marketing investment."}),R.jsx("span",{className:"cm-card-arrow",children:"→"})]})
 ]})})
