@@ -83,6 +83,14 @@
  .cap-copy p{font-size:12px}
 }
 
+
+/* Approved light-blue hero preview: narrower left blend, same bottom fade. */
+@media(min-width:761px){
+ .hero{min-height:clamp(620px,48vw,800px)}
+ .hero-art{width:78%;object-position: center center}
+ .hero:after{background:linear-gradient(90deg,#f1e4d6 0%,#f1e4d6 19%,rgba(241,228,214,.93) 24%,rgba(241,228,214,.4) 33%,transparent 44%)}
+}
+
 </style>
 </head>
 <body>
